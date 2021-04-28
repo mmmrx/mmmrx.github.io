@@ -1,23 +1,978 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-{% block title %}{{ title }}{% if theme.index_with_subtitle and subtitle %} – {{ subtitle }}{% endif %}{% endblock %}
+<link rel="stylesheet" href="/css/main.css">
 
-{% block page_class %}
-  {% if is_home() %}page-home{% endif -%}
-{% endblock %}
 
-{% block content %}
-  <section id="posts" class="posts-expand">
-    {% for post in page.posts %}
-      {{ post_template.render(post, true) }}
-    {% endfor %}
-  </section>
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-  {% include '_partials/pagination.swig' %}
-{% endblock %}
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
+  <meta name="description" content="VPS教程,VPS优惠信息">
+<meta property="og:type" content="website">
+<meta property="og:title" content="VPS 668">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="VPS 668">
+<meta property="og:description" content="VPS教程,VPS优惠信息">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="diff">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>VPS 668</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">VPS 668</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/28/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="diff">
+      <meta itemprop="description" content="VPS教程,VPS优惠信息">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VPS 668">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/28/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">linux常用命令.</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-28 19:50:33 / 修改时间：19:51:13" itemprop="dateCreated datePublished" datetime="2021-04-28T19:50:33+08:00">2021-04-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>备忘录，记得收藏~</p>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/28/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/28/2020%E6%9C%80%E4%BD%B3VPS-Vultr%E9%80%89%E8%B4%AD%E5%8F%8A%E6%9C%BA%E6%88%BF%E9%80%89%E6%8B%A9%E6%95%99%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="diff">
+      <meta itemprop="description" content="VPS教程,VPS优惠信息">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VPS 668">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/28/2020%E6%9C%80%E4%BD%B3VPS-Vultr%E9%80%89%E8%B4%AD%E5%8F%8A%E6%9C%BA%E6%88%BF%E9%80%89%E6%8B%A9%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">2020最佳VPS Vultr选购及机房选择教程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-28 19:48:32 / 修改时间：19:50:16" itemprop="dateCreated datePublished" datetime="2021-04-28T19:48:32+08:00">2021-04-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>VULTR</strong> 是一家来自美国的 VPS 商家，官网**<a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8346337-4F">https://www.vultr.com</a>**，其母公司 Choopa 是一家拥有很多自己的数据中心、实力非常雄厚的公司。</p>
+<p>可以说是今年最好的国外VPS，经常有非常大的优惠，比如最新的限时活动： <a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8376265-6G">充10赠送$100</a>。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/28/2020%E6%9C%80%E4%BD%B3VPS-Vultr%E9%80%89%E8%B4%AD%E5%8F%8A%E6%9C%BA%E6%88%BF%E9%80%89%E6%8B%A9%E6%95%99%E7%A8%8B/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/28/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%E6%90%AD%E5%BB%BALNMPLAMP%E7%8E%AF%E5%A2%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="diff">
+      <meta itemprop="description" content="VPS教程,VPS优惠信息">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VPS 668">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/28/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%E6%90%AD%E5%BB%BALNMPLAMP%E7%8E%AF%E5%A2%83/" class="post-title-link" itemprop="url">一键安装脚本搭建LNMPLAMP环境</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-28 19:46:42 / 修改时间：19:48:19" itemprop="dateCreated datePublished" datetime="2021-04-28T19:46:42+08:00">2021-04-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在 VPS 上部署 WEB 应用时经常会用到 LAMP/LNMP 环境，即 linux+apache/nginx+mysql+php 集成环境。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/28/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%E6%90%AD%E5%BB%BALNMPLAMP%E7%8E%AF%E5%A2%83/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/28/%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E5%92%8CVPS%EF%BC%88%E8%99%9A%E6%8B%9F%E4%B8%93%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="diff">
+      <meta itemprop="description" content="VPS教程,VPS优惠信息">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VPS 668">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/28/%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E5%92%8CVPS%EF%BC%88%E8%99%9A%E6%8B%9F%E4%B8%93%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB/" class="post-title-link" itemprop="url">虚拟主机和VPS（虚拟专用服务器）的区别</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-28 19:45:19 / 修改时间：19:46:26" itemprop="dateCreated datePublished" datetime="2021-04-28T19:45:19+08:00">2021-04-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>如果要尽快建立一个网站，并能够快速地获取流量，需要寻找良好的网络托管服务，网络托管服务提供商会提供不同的托管类型。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/28/%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E5%92%8CVPS%EF%BC%88%E8%99%9A%E6%8B%9F%E4%B8%93%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/28/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%9BVPS%E7%9A%84CPU%E9%9D%9E%E5%B8%B8%E5%B7%AE%EF%BC%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="diff">
+      <meta itemprop="description" content="VPS教程,VPS优惠信息">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VPS 668">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/28/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%9BVPS%E7%9A%84CPU%E9%9D%9E%E5%B8%B8%E5%B7%AE%EF%BC%9F/" class="post-title-link" itemprop="url">为什么有些VPS的CPU非常差？</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-28 19:44:19 / 修改时间：19:45:03" itemprop="dateCreated datePublished" datetime="2021-04-28T19:44:19+08:00">2021-04-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="/Users/diffxiao/Blog/00VPS/4%E9%85%8D%E5%9B%BE/20201005/1.jpg" alt="vps"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/28/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%9BVPS%E7%9A%84CPU%E9%9D%9E%E5%B8%B8%E5%B7%AE%EF%BC%9F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/28/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8SolusVM%E7%AE%A1%E7%90%86VPS%EF%BC%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="diff">
+      <meta itemprop="description" content="VPS教程,VPS优惠信息">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VPS 668">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/28/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8SolusVM%E7%AE%A1%E7%90%86VPS%EF%BC%9F/" class="post-title-link" itemprop="url">如何使用SolusVM管理VPS？</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-28 19:42:05 / 修改时间：19:43:48" itemprop="dateCreated datePublished" datetime="2021-04-28T19:42:05+08:00">2021-04-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Solus Virtual Manager (SolusVM）作为一个简洁、功能强大的VPS管理面板，主要有开机、关机、重启、重装、重设root密码、修改主机名、终端、IP地址管理、快速备份、流量统计等，一些朋友可能对VPS使用的以下问题不是很清楚：</p>
+<ul>
+<li>怎么看VPS系统的详细情况？</li>
+<li>怎么看资源使用情况？</li>
+<li>怎么重启、关机</li>
+<li>如果玩坏了VPS怎么重装系统？</li>
+<li>如果密码太弱VPS被黑了，怎么自己改？</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/28/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8SolusVM%E7%AE%A1%E7%90%86VPS%EF%BC%9F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/28/VPS%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96%E5%90%84%E7%A7%8D%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="diff">
+      <meta itemprop="description" content="VPS教程,VPS优惠信息">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VPS 668">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/28/VPS%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96%E5%90%84%E7%A7%8D%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB/" class="post-title-link" itemprop="url">VPS网络优化各种方法汇总</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-28 19:40:29 / 修改时间：19:41:52" itemprop="dateCreated datePublished" datetime="2021-04-28T19:40:29+08:00">2021-04-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>大家的大部分VPS都是放在国外的，在国外的服务器上因为受各种因素影响，即使国外的服务器都是百兆共享或者G口到国内下载速度都不是很让人满意，而大部分的朋友们都用的廉价Linux VPS，毕竟方便便宜，这里为大家介绍一下几种网络优化的软件。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/28/VPS%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96%E5%90%84%E7%A7%8D%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/28/%E6%96%B0%E6%89%8B%E5%BB%BA%E7%AB%99VPS%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AE%A1%E7%90%86%E9%9D%A2%E6%9D%BF-%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="diff">
+      <meta itemprop="description" content="VPS教程,VPS优惠信息">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VPS 668">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/28/%E6%96%B0%E6%89%8B%E5%BB%BA%E7%AB%99VPS%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AE%A1%E7%90%86%E9%9D%A2%E6%9D%BF-%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">新手建站VPS服务器管理面板-宝塔面板安装教程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-28 19:35:49 / 修改时间：19:39:45" itemprop="dateCreated datePublished" datetime="2021-04-28T19:35:49+08:00">2021-04-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>很多人买VPS是为了搭建SS或者搭建网站，<strong>利用VPS搭建网站一般都是：搭建LNMP环境 》创建虚拟主机 》创建数据库 》上传程序 》绑定域名</strong></p>
+<p>但是在整个过程中都是命令操作，必须步步仔细，步步小心，要是安装中途出现小问题或者以后需要修改，面对命令行界面估计只能发呆了，这样对于新手和习惯虚拟主机的同学来说就太痛苦了，代码太多，无法轻松管理。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/28/%E6%96%B0%E6%89%8B%E5%BB%BA%E7%AB%99VPS%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AE%A1%E7%90%86%E9%9D%A2%E6%9D%BF-%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/28/VPS%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%EF%BC%9Acentos%E7%B3%BB%E7%BB%9FVPS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8C%82%E8%BD%BD%E6%95%B0%E6%8D%AE%E7%9B%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="diff">
+      <meta itemprop="description" content="VPS教程,VPS优惠信息">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VPS 668">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/28/VPS%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%EF%BC%9Acentos%E7%B3%BB%E7%BB%9FVPS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8C%82%E8%BD%BD%E6%95%B0%E6%8D%AE%E7%9B%98/" class="post-title-link" itemprop="url">VPS新手教程：centos系统VPS服务器挂载数据盘</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-28 19:33:18 / 修改时间：19:35:31" itemprop="dateCreated datePublished" datetime="2021-04-28T19:33:18+08:00">2021-04-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>很多网友在购买拿到VPS服务器之后会直接安装环境使用，在使用一段时间后会发现数据已占满系统盘，而数据盘却没有挂载利用起来。</p>
+<p>所以安装环境前我们先进行数据盘挂载，做分区和格式化操作。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/28/VPS%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%EF%BC%9Acentos%E7%B3%BB%E7%BB%9FVPS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8C%82%E8%BD%BD%E6%95%B0%E6%8D%AE%E7%9B%98/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/28/%E4%BA%91%E6%89%98%E7%AE%A1Vultr%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%B1%BB%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="diff">
+      <meta itemprop="description" content="VPS教程,VPS优惠信息">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VPS 668">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/28/%E4%BA%91%E6%89%98%E7%AE%A1Vultr%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%B1%BB%E5%9E%8B/" class="post-title-link" itemprop="url">云托管Vultr服务器类型</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-28 19:31:00 / 修改时间：19:32:33" itemprop="dateCreated datePublished" datetime="2021-04-28T19:31:00+08:00">2021-04-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>云服务器托管类型分为很多种，各大平台都有些细微的区别，搞得有些朋友不知道选哪个。</p>
+<p>其实这个类型名字虽然有区别，但本质是一样的。</p>
+<p>下面以著名的<a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8346337-4F">Vultr</a>云托管服务器类型来说明。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/28/%E4%BA%91%E6%89%98%E7%AE%A1Vultr%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%B1%BB%E5%9E%8B/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">diff</p>
+  <div class="site-description" itemprop="description">VPS教程,VPS优惠信息</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">diff</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
