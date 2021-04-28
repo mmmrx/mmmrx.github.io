@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="owncloud是一个完全开源的的网盘（文件存储）系统，是基于 php 开发的，可以很快的在自己服务器上搭建一套 owncloud。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VPS教程：搭建Ubuntu个人网盘0—owncloud">
+<meta property="og:url" content="http://example.com/2021/04/28/VPS%E6%95%99%E7%A8%8B%EF%BC%9A%E6%90%AD%E5%BB%BAUbuntu%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%980%E2%80%94owncloud/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="owncloud是一个完全开源的的网盘（文件存储）系统，是基于 php 开发的，可以很快的在自己服务器上搭建一套 owncloud。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/Users/diffxiao/Blog/blog/source/_posts/C:%5CUsers%5CAdministrator%5CDesktop%5C%E6%96%9C%E6%9D%A0%E9%9D%92%E5%B9%B4%5C1%E3%80%81%E8%BD%AF%E6%96%87%E6%8E%A8%E8%8D%90%EF%BC%88%E4%BE%B5%E5%88%A0%EF%BC%89%5C1%E3%80%81VPS%5C%E9%85%8D%E5%9B%BE%5C20201006%5C42.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428191854.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428191907.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428191920.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428191933.png">
+<meta property="article:published_time" content="2021-04-28T11:18:03.000Z">
+<meta property="article:modified_time" content="2021-04-28T11:19:51.374Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/Users/diffxiao/Blog/blog/source/_posts/C:%5CUsers%5CAdministrator%5CDesktop%5C%E6%96%9C%E6%9D%A0%E9%9D%92%E5%B9%B4%5C1%E3%80%81%E8%BD%AF%E6%96%87%E6%8E%A8%E8%8D%90%EF%BC%88%E4%BE%B5%E5%88%A0%EF%BC%89%5C1%E3%80%81VPS%5C%E9%85%8D%E5%9B%BE%5C20201006%5C42.png">
+
+<link rel="canonical" href="http://example.com/2021/04/28/VPS%E6%95%99%E7%A8%8B%EF%BC%9A%E6%90%AD%E5%BB%BAUbuntu%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%980%E2%80%94owncloud/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>VPS教程：搭建Ubuntu个人网盘0—owncloud | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/28/VPS%E6%95%99%E7%A8%8B%EF%BC%9A%E6%90%AD%E5%BB%BAUbuntu%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%980%E2%80%94owncloud/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VPS教程：搭建Ubuntu个人网盘0—owncloud
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-28 19:18:03 / 修改时间：19:19:51" itemprop="dateCreated datePublished" datetime="2021-04-28T19:18:03+08:00">2021-04-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>owncloud是一个完全开源的的网盘（文件存储）系统，是基于 php 开发的，可以很快的在自己服务器上搭建一套 owncloud。</p>
+<span id="more"></span>
+
+<p>介绍一下 owncloud 与其它网盘系统，如<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/262246425">kodexplorer</a>、<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/262266273">seafile</a>相比的优势特点。</p>
+<ul>
+<li>首先 owncloud 是完全开源的，动手能力强的可以根据自己的需求改功能，非常灵活；</li>
+<li>开源也意味着代码完全透明，所以文件的安全性和隐私还是很可靠的。</li>
+<li>owncloud 除了包含网盘基础功能，还有一项很逆天的功能，就是实现了文件的多端同步。比如设置个人 PC 机上的文件夹与 owncloud 服务器中的文件同步，那么我在本地文件夹上中对文件增删改都会即时同步到 owncloud 中去。而且支持把文件同步到其它客户端，如 IOS、android、windows 设备。</li>
+</ul>
+<h2 id="owncloud-安装步骤"><a href="#owncloud-安装步骤" class="headerlink" title="owncloud 安装步骤"></a>owncloud 安装步骤</h2><p>因为主要用到 owncloud 的文件存储和同步，所以对服务器的访问速度、下载速度和磁盘 IO 要求相对比较高。</p>
+<p>推荐使用 vultr 的云服务器，均采用千兆带宽、SSD 硬盘，自带一键部署 owncloud 功能，按小时计费，随用随停，且支持支付宝付款。而且 vultr 现在还有注册送 100 美元的活动，活动直达：<a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8376265-6G">VULTR 2020 年优惠，新用户直接送 100 美元</a>)</p>
+<p>推荐阅读：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f3a42d4b8cb5">VPS搭建教程（简单易懂）</a></p>
+<p>是基于 Ubuntu16.04 部署的 owncloud。</p>
+<p>owncloud 是基于 php+mysql 的 web 应用，搭建方式也很简单。分三步：</p>
+<ol>
+<li><p>部署 lamp 环境；</p>
+</li>
+<li><p>下载安装 owncloud；</p>
+</li>
+<li><p>配置 apache、owncloud 等配置项。具体步骤如下，都是使用 root 用户执行的命令</p>
+</li>
+</ol>
+<p><strong>1 安装 lamp</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get install apache2</span><br><span class="line"></span><br><span class="line">apt-get install mysql-server</span><br></pre></td></tr></table></figure>
+
+
+
+<p>中途会让你输入 mysql 密码，需要记住该密码</p>
+<p><strong>2 安装 php7 及相关扩展</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get install php7.0</span><br><span class="line"></span><br><span class="line">apt-get install libapache2-mod-php7.0 php7.0-gd php7.0-mysql php7.0-curl php7.0-intl php7.0-mcrypt php-imagick php7.0-zip php7.0-xml php7.0-mbstring</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>3 下载 owncloud 软件包</strong></p>
+<p>wget <a target="_blank" rel="noopener" href="https://download.owncloud.org/community/owncloud-10.1.1.tar.bz2">https://download.owncloud.org/community/owncloud-10.1.1.tar.bz2</a></p>
+<p>解压，复制到 apache 根目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar xjf owncloud-10.1.1.tar.bz2</span><br><span class="line"></span><br><span class="line">cp -r -v owncloud&#x2F; &#x2F;var&#x2F;www&#x2F;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>给权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;var&#x2F;www</span><br><span class="line"></span><br><span class="line">chmod -R 777 owncloud</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>4 修改 apache 配置</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;apache2&#x2F;sites-enabled&#x2F;000-default.conf</span><br></pre></td></tr></table></figure>
+
+
+
+<p>将 DocumentRoot /var/www/html，改为 DocumentRoot /var/www/owncloud</p>
+<p>重启 apache</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Service apache2 restart</span><br></pre></td></tr></table></figure>
+
+
+
+<p>访问你服务器的 IP 地址，看到以下配置界面，说明之前的安装都没有问题</p>
+<p><img src="/Users/diffxiao/Blog/blog/source/_posts/C:%5CUsers%5CAdministrator%5CDesktop%5C%E6%96%9C%E6%9D%A0%E9%9D%92%E5%B9%B4%5C1%E3%80%81%E8%BD%AF%E6%96%87%E6%8E%A8%E8%8D%90%EF%BC%88%E4%BE%B5%E5%88%A0%EF%BC%89%5C1%E3%80%81VPS%5C%E9%85%8D%E5%9B%BE%5C20201006%5C42.png"></p>
+<p>然后配置你的登录帐号、mysql 信息，点击开始安装，等待几秒钟。安装完成后，进入 owncloud，主界面如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428191854.png"></p>
+<p>可以看到跟一般网盘差不多，文件上传、下载、共享、预览、用户组、权限控制都有。</p>
+<h2 id="owncloud-文件同步"><a href="#owncloud-文件同步" class="headerlink" title="owncloud 文件同步"></a>owncloud 文件同步</h2><p>接下来体验下 owncloud 文件多端同步的功能吧。先尝试下在本地 windows PC 机与 owncloud 中文件同步。</p>
+<p>首先在 owncloud 官网下载 windows 客户端，地址：<a target="_blank" rel="noopener" href="https://download.owncloud.com/desktop/stable/ownCloud-2.5.4.11654.11466.msi%E3%80%82%E5%AE%89%E8%A3%85%E4%BB%A5%E5%90%8E%EF%BC%8C%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%B0%E5%9D%80%E3%80%82">https://download.owncloud.com/desktop/stable/ownCloud-2.5.4.11654.11466.msi。安装以后，配置服务器地址。</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428191907.png"></p>
+<p>填入 http://+IP，然后输入你 owncloud 的账号密码，登录成功后，设置文件同步方案</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428191920.png"></p>
+<p>以上设置表示将 owncloud 中我的账号中的文件同步到本地的 F：\owncloud 文件夹中。连接之后可以看到文件同步状态</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428191933.png"></p>
+<p>然后验证在 owncloud 中上传文件会即时同步到本地文件夹中，在本地文件夹中添加文件也能即使同步到 owncloud 中去。</p>
+<p>参考:<a target="_blank" rel="noopener" href="https://www.vpsjxw.com/vps_use/owncloud_intro/">https://www.vpsjxw.com/vps_use/owncloud_intro/</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/04/28/VPS%E6%90%AD%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98%EF%BC%8Cseafile%E3%80%81kodexplorer%E3%80%81h5ai%E8%B0%81%E6%9B%B4%E5%90%88%E9%80%82%EF%BC%9F/" rel="prev" title="VPS搭个人网盘，seafile、kodexplorer、h5ai谁更合适？">
+      <i class="fa fa-chevron-left"></i> VPS搭个人网盘，seafile、kodexplorer、h5ai谁更合适？
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/04/28/VPS%E6%95%99%E7%A8%8B%EF%BC%9A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98%E2%80%94H5ai/" rel="next" title="VPS教程：搭建个人网盘—H5ai.">
+      VPS教程：搭建个人网盘—H5ai. <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#owncloud-%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.</span> <span class="nav-text">owncloud 安装步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#owncloud-%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5"><span class="nav-number">2.</span> <span class="nav-text">owncloud 文件同步</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
