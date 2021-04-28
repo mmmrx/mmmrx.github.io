@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="很多人用 VPS 来自建个人邮箱，自己搭建邮件服务器主要可以用来邮件营销（edm），发邮件引流；也可以用做个人邮箱收发邮件，用带自己域名的邮箱号还是比较炫酷的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VPS教程：搭建个人专属邮箱">
+<meta property="og:url" content="http://example.com/vps/89cde604.html">
+<meta property="og:site_name" content="VPS 688">
+<meta property="og:description" content="很多人用 VPS 来自建个人邮箱，自己搭建邮件服务器主要可以用来邮件营销（edm），发邮件引流；也可以用做个人邮箱收发邮件，用带自己域名的邮箱号还是比较炫酷的。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192529.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192536.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192540.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192544.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192549.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192554.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192558.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192603.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192608.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192614.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192621.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192626.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192631.png">
+<meta property="article:published_time" content="2021-04-28T11:24:49.000Z">
+<meta property="article:modified_time" content="2021-04-28T14:06:44.150Z">
+<meta property="article:tag" content="VPS教程,VPS优惠,便宜VPS,免费VPS,美国VPS,韩国VPS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192529.png">
+
+<link rel="canonical" href="http://example.com/vps/89cde604.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>VPS教程：搭建个人专属邮箱 | VPS 688</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">VPS 688</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">VPS教程,VPS优惠信息</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/vps/89cde604.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VPS 688">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VPS教程：搭建个人专属邮箱
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-28 19:24:49 / 修改时间：22:06:44" itemprop="dateCreated datePublished" datetime="2021-04-28T19:24:49+08:00">2021-04-28</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>很多人用 VPS 来自建个人邮箱，自己搭建邮件服务器主要可以用来邮件营销（edm），发邮件引流；也可以用做个人邮箱收发邮件，用带自己域名的邮箱号还是比较炫酷的。</p>
+<span id="more"></span>
+
+<p>选用<strong>ireadmail</strong>搭建的个人邮箱，有以下原因：</p>
+<ul>
+<li> iredmail 是邮件系统个组件的集成包，一键搭建比较快捷，功能也很丰富。</li>
+<li> 支持部署在主流 linux 发行版上，如 ubuntu、centos、debian 等；</li>
+<li> 部署安装快速便捷，1 分钟即可安装完成（官方这么宣传的，预计安装时间需要十几分钟吧）；</li>
+<li> 支持 TSL/SSL 加密，邮件备份，抵挡垃圾邮件等功能。</li>
+</ul>
+<p>简单介绍下 iredmail 的原理和核心组件。</p>
+<p>iredmail 核心组件包括：</p>
+<ul>
+<li><p>Postfix–SMTP 服务器；</p>
+<p>Postfix 提供 MTA 功能，即邮件服务器，负责服务器端的收发邮件。</p>
+</li>
+<li><p>Dovecot– POP3/IMAP/Managesieve 服务器。</p>
+<p>Dovecot 是一个开源的 IMAP 和 POP3 邮件服务器，为邮件用户代理端(MUA，用户查看操作邮件的客户端，如 foxmail、outlook)提供了一种访问服务器上存储的邮件的方法，是邮件服务端（MTA）与客户端（MUA）之间的桥梁，负责检测用户的合法性等功能。</p>
+</li>
+</ul>
+<p>废话不多说，直接进入正题。</p>
+<h2 id="提前准备"><a href="#提前准备" class="headerlink" title="提前准备"></a>提前准备</h2><p>1 个域名</p>
+<p>1 个带公网 IP 的 VPS，内存最少 1G 以上，推荐<a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8346337-4F">vultr</a>家 1.5G VPS，支持自助无限换 IP，防止 ip 被墙。（1G 内存是最小配置，虽然安装成功了，但后来有几次都提醒内存不够）。而且 vultr 现在还有注册送 100 美元的活动，活动直达：<a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8376265-6G">VULTR 2020 年优惠，新用户直接送 100 美元</a></p>
+<p>推荐阅读：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/258990106">2020最佳VPS Vultr选购及机房选择教程</a></p>
+<p><strong>为了下文方便说明，假设你的域名是 jikeshare.com,ip 是 11.11.11.11</strong></p>
+<p>以下步骤在 vultr 1G 主机、centos7 系统上验证成功</p>
+<h2 id="iredmail-安装配置步骤"><a href="#iredmail-安装配置步骤" class="headerlink" title="iredmail 安装配置步骤"></a>iredmail 安装配置步骤</h2><p>最新版 iredmail（V0.9.9）兼容新列表如下，所以我们直接在 centos7 上搭建</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192529.png"></p>
+<p><strong>1 配置域名，在你买的域名中加两条解析，如下所示</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">主机记录    记录类型    线路类型    记录值              MX 优先级mail         A        默认       11.11.11.11.11@　　　　　　　MX       默认       mail.jikeshare.com        5</span><br></pre></td></tr></table></figure>
+
+<p><strong>2 修改 vps 主机 host 和 hostname</strong></p>
+<p>编辑<code> /etc/sysconfig/network</code>，设置 <code>hostname</code> 成我们的邮件域名<code> mail.jikeshare.com</code></p>
+<p>编辑<code>/etc/hosts</code> 文件，在最上面一样加上 <code>127.0.0.1 mail.jikeshare.com mail localhost.localdomain localhost</code> 脚本，注意其中修改成我们自己的主机名。</p>
+<p>注：如果 vim 出错，先安装 vim，yum intall vim</p>
+<p>如果以上方法没设置不成功，用以下方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl set-hostname mail.jikeshare.com</span><br></pre></td></tr></table></figure>
+
+
+
+<p>重启 VPS 之后，再用”<code>hostname -f</code>”查看会看到当前的主机名已经是 mail.jikeshare.com 的。</p>
+<p><strong>3 配置系统环境</strong></p>
+<p>更新系统</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
+
+
+
+<p>禁用 Selinux</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;selinux&#x2F;config</span><br></pre></td></tr></table></figure>
+
+
+
+<p>设置 SELINUX=disabled</p>
+<p>保证 vps 主机的 80、443 端口是在防火墙开放，vultr 默认没有开放，参考这篇文章开放端口：[<a target="_blank" rel="noopener" href="https://www.vpsjxw.com/vps_use/vultr_open_80443/">VPS 主机配置]vultr 开启 80、443 端口及更换 ssh 端口教程 </a></p>
+<p><strong>4 安装 iredmail0.9.9</strong></p>
+<p>下载安装包</p>
+<p>wget <a target="_blank" rel="noopener" href="https://bitbucket.org/zhb/iredmail/downloads/iRedMail-0.9.9.tar.bz2">https://bitbucket.org/zhb/iredmail/downloads/iRedMail-0.9.9.tar.bz2</a></p>
+<p>解压安装包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xjf iRedMail-0.9.8.tar.bz2</span><br></pre></td></tr></table></figure>
+
+
+
+<p>如果遇到以下报错，执行<code> yum install bzip2</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192536.png"></p>
+<p>进入 iredmail 目录，执行 sh 文件安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd iRedMail-0.9.9</span><br><span class="line"></span><br><span class="line">bash iRedMail.sh</span><br></pre></td></tr></table></figure>
+
+
+
+<p>注：其他安装文档都提示需要修改 iRedMail.sh 中的地址，因为国内访问不通。但是 vultr 上部署不用换，因为 vultr 主机本来就在国外。</p>
+<p>脚本运行过程中需要手动配置一些东西，如下所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192540.png"></p>
+<p>确认安装，按 yes，下一步</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192544.png"></p>
+<p>确认邮件默认存储目录，next，下一步</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192549.png"></p>
+<p>选择 web 服务器，直接用默认的 nginx 即可。注：通过空格键选择选项</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192554.png"></p>
+<p>选择数据库，选择 mariadb。注：通过空格键选择选项</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192558.png"></p>
+<p>设置数据库密码</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192603.png"></p>
+<p>输入准备好的域名，如 aaa.com</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192608.png"></p>
+<p>设置 iredmail 管理员密码</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192614.png"></p>
+<p>选择 iredmail 插件功能，都选上。注：通过空格键选择选项</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192621.png"></p>
+<p>确认自己配置了以下内容，然后开始安装</p>
+<p>注：安装过程中会有一个让设置防火墙 iptables 和数据库的选项，iptables 选 n 数据库选择 y</p>
+<p>以下是安装成功界面，包括了 web 界面地址、管理界面地址、和管理员信息。然后重启机器使所有服务生效。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192626.png"></p>
+<p>登录 <a target="_blank" rel="noopener" href="https://mail.aaa.com/mail">https://mail.aaa.com/mail</a> 邮件 web 客户端，跟一般的网易，QQ 邮箱功能差不多，尽情的折腾吧</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192631.png"></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.vpsjxw.com/vps_use/vps_iredmail_install/">https://www.vpsjxw.com/vps_use/vps_iredmail_install/</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/vps/cb981a71.html" rel="prev" title="VPS教程：搭建个人网盘教程—kodexplorer">
+      <i class="fa fa-chevron-left"></i> VPS教程：搭建个人网盘教程—kodexplorer
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/vps/738b3309.html" rel="next" title="VPS教程：实现微信机器人">
+      VPS教程：实现微信机器人 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E5%89%8D%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">提前准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iredmail-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">iredmail 安装配置步骤</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name"></p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"></span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

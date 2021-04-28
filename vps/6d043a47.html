@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="VULTR 是一家来自美国的 VPS 商家，官网**https:&#x2F;&#x2F;www.vultr.com**，其母公司 Choopa 是一家拥有很多自己的数据中心、实力非常雄厚的公司。 可以说是今年最好的国外VPS，经常有非常大的优惠，比如最新的限时活动： 充10赠送$100。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020最佳VPS Vultr选购及机房选择教程">
+<meta property="og:url" content="http://example.com/vps/6d043a47.html">
+<meta property="og:site_name" content="VPS 688">
+<meta property="og:description" content="VULTR 是一家来自美国的 VPS 商家，官网**https:&#x2F;&#x2F;www.vultr.com**，其母公司 Choopa 是一家拥有很多自己的数据中心、实力非常雄厚的公司。 可以说是今年最好的国外VPS，经常有非常大的优惠，比如最新的限时活动： 充10赠送$100。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428194951.png">
+<meta property="article:published_time" content="2021-04-28T11:48:32.000Z">
+<meta property="article:modified_time" content="2021-04-28T14:06:44.158Z">
+<meta property="article:tag" content="VPS教程,VPS优惠,便宜VPS,免费VPS,美国VPS,韩国VPS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428194951.png">
+
+<link rel="canonical" href="http://example.com/vps/6d043a47.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>2020最佳VPS Vultr选购及机房选择教程 | VPS 688</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">VPS 688</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">VPS教程,VPS优惠信息</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/vps/6d043a47.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VPS 688">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2020最佳VPS Vultr选购及机房选择教程
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-28 19:48:32 / 修改时间：22:06:44" itemprop="dateCreated datePublished" datetime="2021-04-28T19:48:32+08:00">2021-04-28</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong>VULTR</strong> 是一家来自美国的 VPS 商家，官网**<a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8346337-4F">https://www.vultr.com</a>**，其母公司 Choopa 是一家拥有很多自己的数据中心、实力非常雄厚的公司。</p>
+<p>可以说是今年最好的国外VPS，经常有非常大的优惠，比如最新的限时活动： <a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8376265-6G">充10赠送$100</a>。</p>
+<span id="more"></span>
+
+<p><strong>VPS注册及搭建教程可查看《<a target="_blank" rel="noopener" href="http://vps688.com/2021/04/28/VPS%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88%E7%AE%80%E5%8D%95%E6%98%93%E6%87%82%EF%BC%89/">VPS搭建教程（简单易懂）</a>》</strong></p>
+<p>在服务器领域，VULTR 目前主营便宜 VPS、高性能 VPS、专用 VDS 和独立服务器业务，<strong>共有17个数据中心</strong>并提供了不同配置方案可供大家选择，具体可详见下表的两类Vultr VPS配置方案：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428194951.png"></p>
+<h3 id="一、便宜VPS方案汇总【Cloud-Compute】"><a href="#一、便宜VPS方案汇总【Cloud-Compute】" class="headerlink" title="一、便宜VPS方案汇总【Cloud Compute】"></a>一、便宜VPS方案汇总【Cloud Compute】</h3><table>
+<thead>
+<tr>
+<th align="left">方案</th>
+<th align="left">月价格</th>
+<th align="left">小时价格</th>
+<th align="left">CPU</th>
+<th align="left">内存</th>
+<th align="left">硬盘</th>
+<th align="left">流量</th>
+<th align="left">购买</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">$2.50</td>
+<td align="left">$0.004</td>
+<td align="left">1核</td>
+<td align="left">512 MB</td>
+<td align="left">10 GB</td>
+<td align="left">500 GB/月</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8346337-4F">直达链接</a></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">$3.50</td>
+<td align="left">$0.005</td>
+<td align="left">1核</td>
+<td align="left">512MB</td>
+<td align="left">10GB</td>
+<td align="left">500GB/月</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8346337-4F">直达链接</a></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">$5</td>
+<td align="left">$0.007</td>
+<td align="left">1核</td>
+<td align="left">1 GB</td>
+<td align="left">25 GB</td>
+<td align="left">1TB/月</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8346337-4F">直达链接</a></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">$10</td>
+<td align="left">$0.015</td>
+<td align="left">1核</td>
+<td align="left">2 GB</td>
+<td align="left">55 GB</td>
+<td align="left">2TB/月</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8346337-4F">直达链接</a></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">$20</td>
+<td align="left">$0.030</td>
+<td align="left">2核</td>
+<td align="left">4GB</td>
+<td align="left">80GB</td>
+<td align="left">3TB/月</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8346337-4F">直达链接</a></td>
+</tr>
+</tbody></table>
+<p><strong>PS:上述 $2.5/月 的套餐只提供 IPv6 地址，不提供IPv4，故不建议使用。</strong></p>
+<h3 id="二、高性能VPS方案汇总【High-Frequency】"><a href="#二、高性能VPS方案汇总【High-Frequency】" class="headerlink" title="二、高性能VPS方案汇总【High Frequency】"></a>二、高性能VPS方案汇总【High Frequency】</h3><table>
+<thead>
+<tr>
+<th align="left">方案</th>
+<th align="left">月价格</th>
+<th align="left">小时价格</th>
+<th align="left">CPU</th>
+<th align="left">内存</th>
+<th align="left">硬盘</th>
+<th align="left">流量</th>
+<th align="left">购买</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">$6</td>
+<td align="left">$0.009</td>
+<td align="left">1核</td>
+<td align="left">1GB</td>
+<td align="left">32GB</td>
+<td align="left">1TB/月</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8346337-4F">直达链接</a></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">$12</td>
+<td align="left">$0.018</td>
+<td align="left">1核</td>
+<td align="left">2GB</td>
+<td align="left">64GB</td>
+<td align="left">2TB/月</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8346337-4F">直达链接</a></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">$24</td>
+<td align="left">$0.036</td>
+<td align="left">2核</td>
+<td align="left">4 GB</td>
+<td align="left">128GB</td>
+<td align="left">3TB/月</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8346337-4F">直达链接</a></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">$48</td>
+<td align="left">$0.071</td>
+<td align="left">3核</td>
+<td align="left">8 GB</td>
+<td align="left">256GB</td>
+<td align="left">4TB/月</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8346337-4F">直达链接</a></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">$96</td>
+<td align="left">$0.143</td>
+<td align="left">4核</td>
+<td align="left">16GB</td>
+<td align="left">384GB</td>
+<td align="left">5TB/月</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8346337-4F">直达链接</a></td>
+</tr>
+</tbody></table>
+<p>更多配置方案可以前往<a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8346337-4F">Vultr官网</a>查看，大家可以依照自己的需求选择合适的方案，初次接触Vultr的网友，<strong>如果注册购买及VPS的搭建，可以参照这篇文章：《<a target="_blank" rel="noopener" href="http://vps688.com/2021/04/28/VPS%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88%E7%AE%80%E5%8D%95%E6%98%93%E6%87%82%EF%BC%89/">VPS搭建教程（简单易懂）</a>》</strong></p>
+<h3 id="三、Vultr机房推荐"><a href="#三、Vultr机房推荐" class="headerlink" title="三、Vultr机房推荐"></a>三、Vultr机房推荐</h3><p>目前 Vultr 提供的机房共计 17 个，覆盖了亚洲、欧洲、美国、澳洲等地区，有日本、韩国、新加坡、美国、法国等国家都有，以下仅为建议，最好还是根据自己的具体情况进行测试选择，找到最适合自己的数据中心， 2020 年 Vultr 最新机房测速地址及测速方法可前往<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/19d9fb029f04">Vultr机房测速</a>了解测试</p>
+<ul>
+<li> 移动用户机房推荐</li>
+</ul>
+<p>移动用户推荐使用东京（Tokyo）、新加坡（Singapore）、洛杉矶（Los Angeles）机房。</p>
+<ul>
+<li>联通用户机房推荐</li>
+</ul>
+<p>联通用户推荐使用东京（Tokyo）、洛杉矶（Los Angeles）、硅谷（Silicon Valley）、西雅图（Seattle）、新加坡（Singapore）机房。</p>
+<ul>
+<li>电信用户机房推荐</li>
+</ul>
+<p>电信用户推荐使用洛杉矶（Los Angeles）、硅谷（Silicon Valley）、西雅图（Seattle）机房。</p>
+<h3 id="四、Vultr官方测速地址"><a href="#四、Vultr官方测速地址" class="headerlink" title="四、Vultr官方测速地址"></a>四、Vultr官方测速地址</h3><p> 以下是2020 年 Vultr 最新机房测速地址，具体可前往<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/19d9fb029f04">Vultr机房测速</a>了解测试</p>
+<table>
+<thead>
+<tr>
+<th>地理位置</th>
+<th>官方测试服务器地址</th>
+<th>文件下载测试地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(Asia)Seoul, Korea[韩国 首尔]</td>
+<td><a target="_blank" rel="noopener" href="http://ping.chinaz.com/sel-kor-ping.vultr.com">sel-kor-ping.vultr.com</a></td>
+<td><a target="_blank" rel="noopener" href="http://sel-kor-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a target="_blank" rel="noopener" href="http://sel-kor-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>(Asia)Tokyo, Japan[日本 东京]</td>
+<td><a target="_blank" rel="noopener" href="http://ping.chinaz.com/hnd-jp-ping.vultr.com">hnd-jp-ping.vultr.com</a></td>
+<td><a target="_blank" rel="noopener" href="http://hnd-jp-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a target="_blank" rel="noopener" href="http://hnd-jp-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>Singapore[新加坡]</td>
+<td><a target="_blank" rel="noopener" href="http://ping.chinaz.com/sgp-ping.vultr.com">sgp-ping.vultr.com</a></td>
+<td><a target="_blank" rel="noopener" href="http://sgp-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a target="_blank" rel="noopener" href="http://sgp-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>(AU) Sydney, Australia[悉尼]</td>
+<td><a target="_blank" rel="noopener" href="http://ping.chinaz.com/syd-au-ping.vultr.com">syd-au-ping.vultr.com</a></td>
+<td><a target="_blank" rel="noopener" href="http://syd-au-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a target="_blank" rel="noopener" href="http://syd-au-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>(EU) Frankfurt, DE[德国 法兰克福]</td>
+<td><a target="_blank" rel="noopener" href="http://ping.chinaz.com/fra-de-ping.vultr.com">fra-de-ping.vultr.com</a></td>
+<td><a target="_blank" rel="noopener" href="http://fra-de-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a target="_blank" rel="noopener" href="http://fra-de-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>(EU) Amsterdam, NL[荷兰 阿姆斯特丹]</td>
+<td><a target="_blank" rel="noopener" href="http://ping.chinaz.com/ams-nl-ping.vultr.com">ams-nl-ping.vultr.com</a></td>
+<td><a target="_blank" rel="noopener" href="http://ams-nl-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a target="_blank" rel="noopener" href="http://ams-nl-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>(EU) London, UK[英国 伦敦]</td>
+<td><a target="_blank" rel="noopener" href="http://ping.chinaz.com/lon-gb-ping.vultr.com">lon-gb-ping.vultr.com</a></td>
+<td><a target="_blank" rel="noopener" href="http://lon-gb-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a target="_blank" rel="noopener" href="http://lon-gb-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>(EU) Paris, France[法国 巴黎]</td>
+<td><a target="_blank" rel="noopener" href="http://ping.chinaz.com/par-fr-ping.vultr.com">par-fr-ping.vultr.com</a></td>
+<td><a target="_blank" rel="noopener" href="http://par-fr-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a target="_blank" rel="noopener" href="http://par-fr-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>Seattle, Washington[美东 华盛顿州 西雅图]</td>
+<td><a target="_blank" rel="noopener" href="http://ping.chinaz.com/wa-us-ping.vultr.com">wa-us-ping.vultr.com</a></td>
+<td><a target="_blank" rel="noopener" href="http://wa-us-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a target="_blank" rel="noopener" href="http://wa-us-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>Silicon Valley, Ca[美西 加州 硅谷]</td>
+<td><a target="_blank" rel="noopener" href="http://ping.chinaz.com/sjo-ca-us-ping.vultr.com">sjo-ca-us-ping.vultr.com</a></td>
+<td><a target="_blank" rel="noopener" href="http://sjo-ca-us-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a target="_blank" rel="noopener" href="http://sjo-ca-us-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>Los Angeles, Ca[美西 加州 洛杉矶]</td>
+<td><a target="_blank" rel="noopener" href="http://ping.chinaz.com/lax-ca-us-ping.vultr.com">lax-ca-us-ping.vultr.com</a></td>
+<td><a target="_blank" rel="noopener" href="http://lax-ca-us-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a target="_blank" rel="noopener" href="http://lax-ca-us-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>Chicago, Illinois[美东 芝加哥]</td>
+<td><a target="_blank" rel="noopener" href="http://ping.chinaz.com/il-us-ping.vultr.com">il-us-ping.vultr.com</a></td>
+<td><a target="_blank" rel="noopener" href="http://il-us-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a target="_blank" rel="noopener" href="http://il-us-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>Dallas, Texas[美中 德克萨斯州 达拉斯]</td>
+<td><a target="_blank" rel="noopener" href="http://ping.chinaz.com/tx-us-ping.vultr.com">tx-us-ping.vultr.com</a></td>
+<td><a target="_blank" rel="noopener" href="http://tx-us-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a target="_blank" rel="noopener" href="http://tx-us-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>New York / New Jersey[美东 新泽西]</td>
+<td><a target="_blank" rel="noopener" href="http://ping.chinaz.com/nj-us-ping.vultr.com">nj-us-ping.vultr.com</a></td>
+<td><a target="_blank" rel="noopener" href="http://nj-us-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a target="_blank" rel="noopener" href="http://nj-us-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>Atlanta, Georgiaa[美东 乔治亚州 亚特兰大]</td>
+<td><a target="_blank" rel="noopener" href="http://ping.chinaz.com/ga-us-ping.vultr.com">ga-us-ping.vultr.com</a></td>
+<td><a target="_blank" rel="noopener" href="http://ga-us-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a target="_blank" rel="noopener" href="http://ga-us-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>Miami, Florida[美东 佛罗里达州 迈阿密]</td>
+<td><a target="_blank" rel="noopener" href="http://ping.chinaz.com/fl-us-ping.vultr.com">fl-us-ping.vultr.com</a></td>
+<td><a target="_blank" rel="noopener" href="http://fl-us-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a target="_blank" rel="noopener" href="http://fl-us-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/vps/b8dc433f.html" rel="prev" title="一键安装脚本搭建LNMPLAMP环境">
+      <i class="fa fa-chevron-left"></i> 一键安装脚本搭建LNMPLAMP环境
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/vps/8df92976.html" rel="next" title="linux常用命令.">
+      linux常用命令. <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BE%BF%E5%AE%9CVPS%E6%96%B9%E6%A1%88%E6%B1%87%E6%80%BB%E3%80%90Cloud-Compute%E3%80%91"><span class="nav-number">1.</span> <span class="nav-text">一、便宜VPS方案汇总【Cloud Compute】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%AB%98%E6%80%A7%E8%83%BDVPS%E6%96%B9%E6%A1%88%E6%B1%87%E6%80%BB%E3%80%90High-Frequency%E3%80%91"><span class="nav-number">2.</span> <span class="nav-text">二、高性能VPS方案汇总【High Frequency】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81Vultr%E6%9C%BA%E6%88%BF%E6%8E%A8%E8%8D%90"><span class="nav-number">3.</span> <span class="nav-text">三、Vultr机房推荐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81Vultr%E5%AE%98%E6%96%B9%E6%B5%8B%E9%80%9F%E5%9C%B0%E5%9D%80"><span class="nav-number">4.</span> <span class="nav-text">四、Vultr官方测速地址</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name"></p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"></span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

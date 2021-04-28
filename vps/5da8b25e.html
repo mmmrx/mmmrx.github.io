@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="很多网友在购买拿到VPS服务器之后会直接安装环境使用，在使用一段时间后会发现数据已占满系统盘，而数据盘却没有挂载利用起来。 所以安装环境前我们先进行数据盘挂载，做分区和格式化操作。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VPS新手教程：centos系统VPS服务器挂载数据盘">
+<meta property="og:url" content="http://example.com/vps/5da8b25e.html">
+<meta property="og:site_name" content="VPS 688">
+<meta property="og:description" content="很多网友在购买拿到VPS服务器之后会直接安装环境使用，在使用一段时间后会发现数据已占满系统盘，而数据盘却没有挂载利用起来。 所以安装环境前我们先进行数据盘挂载，做分区和格式化操作。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428193432.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428193449.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428193457.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428193506.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428193512.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428193518.png">
+<meta property="article:published_time" content="2021-04-28T11:33:18.000Z">
+<meta property="article:modified_time" content="2021-04-28T14:06:44.153Z">
+<meta property="article:tag" content="VPS教程,VPS优惠,便宜VPS,免费VPS,美国VPS,韩国VPS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428193432.png">
+
+<link rel="canonical" href="http://example.com/vps/5da8b25e.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>VPS新手教程：centos系统VPS服务器挂载数据盘 | VPS 688</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">VPS 688</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">VPS教程,VPS优惠信息</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/vps/5da8b25e.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VPS 688">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VPS新手教程：centos系统VPS服务器挂载数据盘
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-28 19:33:18 / 修改时间：22:06:44" itemprop="dateCreated datePublished" datetime="2021-04-28T19:33:18+08:00">2021-04-28</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>很多网友在购买拿到VPS服务器之后会直接安装环境使用，在使用一段时间后会发现数据已占满系统盘，而数据盘却没有挂载利用起来。</p>
+<p>所以安装环境前我们先进行数据盘挂载，做分区和格式化操作。</p>
+<span id="more"></span>
+
+<p><strong>由于挂载操作会清空数据，已经有数据一定要注意确认挂载盘内无重要数据：</strong></p>
+<ol>
+<li> 站点数据备份，因为数据盘挂载会清空挂载目录数据，如果你挂载数据盘到站点文件目录，一定先备份好数据。</li>
+<li> 如果挂载数据盘到站点目录，先搞清楚自己站点根目录是什么。</li>
+</ol>
+<p>以下是 VPS服务器 centos系统分区、数据盘挂载详细步骤：</p>
+<p>先用远程连接工具SSH Secure Shell Client或者Xshell 5连接上服务器。如果你对命令不太了解，可点击下面地址 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/diffx/p/13820356.html">Linux中常用操作命令</a>     </p>
+<h4 id="一、查看数据盘"><a href="#一、查看数据盘" class="headerlink" title="一、查看数据盘"></a><strong>一、查看数据盘</strong></h4><p>[root@win23 /]# fdisk -l</p>
+<p>通常我们是用“df –h”命令查看服务器磁盘，但是在没有分区和格式化数据盘之前，使用 “df –h”命令是无法看到数据盘的，因此我们要使用“fdisk -l”（注意是字母l，而不是数字1）命令进行查看。</p>
+<p>磁盘的命名规则为/dev/vd(a-z），系统盘默认是/dev/vda。我们需要找到系统以外多的磁盘/dev/vdb。（注意不要挂错盘，从而导致把系统盘格式化！）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428193432.png" alt="img"> </p>
+<h4 id="二、对数据盘进行分区"><a href="#二、对数据盘进行分区" class="headerlink" title="二、对数据盘进行分区"></a><strong>二、对数据盘进行分区</strong></h4><p>[root@win23 /]# fdisk /dev/vdb</p>
+<p>执行“fdisk /dev/vdb”命令，对数据盘进行分区。根据提示，依次输入“n”、“p”、“1”、两次回车，分区就开始了，很快就会完成。然后输入“p”可查看到刚才的分区结果。此时我们可以看到，新的分区vdb1已建立完成。</p>
+<p>确认分区成功后，输入“w”保存分区设置</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428193449.png" alt="img"></p>
+<h4 id="三、格式化新建的分区"><a href="#三、格式化新建的分区" class="headerlink" title="三、格式化新建的分区"></a><strong>三、格式化新建的分区</strong></h4><p>[root@win23 /]# mkfs.ext4 /dev/vdb1</p>
+<p>以ext4为例（可自主决定选用其它文件格式，如ext3等）：使用“mkfs.ext4 /dev/vdb1”命令对新分区vdb1进行格式化（注意：格式化新建的/dev/vdb1，不要写成/dev/vdb），格式化的时间根据硬盘大小有所不同。</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428193457.png" alt="img"></p>
+<h4 id="四、创建挂载目录，挂载新分区"><a href="#四、创建挂载目录，挂载新分区" class="headerlink" title="四、创建挂载目录，挂载新分区"></a><strong>四、创建挂载目录，挂载新分区</strong></h4><p>[root@win23 /]# mkdir /hdd</p>
+<p>[root@win23 /]# mount /dev/vdb1 /hdd/</p>
+<p>[root@win23 /]# cd /hdd/ </p>
+<p>[root@win23 hdd]# ls</p>
+<p>1、输入命令“mkdir /hdd“创建挂载目录hdd（可自定义）；</p>
+<p>2、执行“mount /dev/vbd1 /hdd/”命令，将新分区vdb1挂载到hdd目录下；</p>
+<p>3、“cd”进入/hdd目录，然后执行命令“ls”查看目录下的文件，查看到lost+found 表示挂载成功。</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428193506.png" alt="img"></p>
+<p>[root@win23 hdd]# df -h</p>
+<p>然后用“df -h”命令查看，出现以下信息就说明挂载成功，可以开始使用新的分区了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428193512.png" alt="img"></p>
+<h4 id="五、设置开机启动自动挂载"><a href="#五、设置开机启动自动挂载" class="headerlink" title="五、设置开机启动自动挂载"></a><strong>五、设置开机启动自动挂载</strong></h4><p>磁盘挂载后重启服务器挂载就会失效，因此我们需要写入硬盘启动信息，下次重启后自动挂载数据盘。</p>
+<p>1.输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;&#x2F;dev&#x2F;vdb1   &#x2F;hdd     ext4       defaults  0 0&quot; &gt;&gt;&#x2F;etc&#x2F;fstab</span><br></pre></td></tr></table></figure>
+
+<p>2.输入命令：cat /etc/fstab进行查看，如果出现下列信息，表示硬盘启动信息已写入完成。</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428193518.png" alt="img"></p>
+<p>  至此，CentOS系统下的数据盘挂载完成。</p>
+<p>接下来就是VPS服务器部署 WEB 应用时安装 LAMP/LNMP 环境或者宝塔面板了，个人比较喜欢和推荐安装宝塔面板，因为对于都是代码操作的Linux系统来说，宝塔面板可以在可视界面中实现为服务器安装应用、同步文件、定期执行代码、管理服务，非常方便。</p>
+<blockquote>
+<p>参考教程：</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/262189089">《一键安装脚本搭建LNMP/LAMP环境》</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/259403543">《VPS新手建站必备系列-宝塔面板安装教程》</a></p>
+</blockquote>
+<p>以上就是Linux VPS服务器centos系统挂载数据盘操作。</p>
+<blockquote>
+<p> 参考链接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/wangchuanyang/p/6380970.html">https://www.cnblogs.com/wangchuanyang/p/6380970.html</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/vps/ace32bcf.html" rel="prev" title="云托管Vultr服务器类型">
+      <i class="fa fa-chevron-left"></i> 云托管Vultr服务器类型
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/vps/de1c02bc.html" rel="next" title="新手建站VPS服务器管理面板-宝塔面板安装教程">
+      新手建站VPS服务器管理面板-宝塔面板安装教程 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E7%9B%98"><span class="nav-number">1.</span> <span class="nav-text">一、查看数据盘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AF%B9%E6%95%B0%E6%8D%AE%E7%9B%98%E8%BF%9B%E8%A1%8C%E5%88%86%E5%8C%BA"><span class="nav-number">2.</span> <span class="nav-text">二、对数据盘进行分区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%96%B0%E5%BB%BA%E7%9A%84%E5%88%86%E5%8C%BA"><span class="nav-number">3.</span> <span class="nav-text">三、格式化新建的分区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%88%9B%E5%BB%BA%E6%8C%82%E8%BD%BD%E7%9B%AE%E5%BD%95%EF%BC%8C%E6%8C%82%E8%BD%BD%E6%96%B0%E5%88%86%E5%8C%BA"><span class="nav-number">4.</span> <span class="nav-text">四、创建挂载目录，挂载新分区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD"><span class="nav-number">5.</span> <span class="nav-text">五、设置开机启动自动挂载</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name"></p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"></span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
