@@ -295,7 +295,7 @@
 <p>安装完后，运行以下命令。该命令可以下载 seafile docker 镜像，运行 seafile 容器即 seafile 服务。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name seafile \ </span><br><span class="line">        -e SEAFILE_SERVER_HOSTNAME&#x3D; seafile.example.com \  </span><br><span class="line">        -v &#x2F;opt&#x2F;seafile-data:&#x2F;shared \  </span><br><span class="line">        -p 80:80 \  </span><br><span class="line">        seafileltd&#x2F;seafile:latest</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>然后等几分钟访问 seafile.example.com，就可以看到登录界面了。默认账号/密码为 <a href="mailto:&#x6d;&#x65;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#x6d;&#x65;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a>/asecret</p>
+<p>然后等几分钟访问 seafile.example.com，就可以看到登录界面了。默认账号/密码为 <a href="mailto:&#x6d;&#101;&#64;&#101;&#120;&#x61;&#x6d;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#x6d;&#101;&#64;&#101;&#120;&#x61;&#x6d;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a>/asecret</p>
 <p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192256.png"></p>
 <p>然后就可以愉快的玩耍了</p>
 <p>最后还是要强烈推荐下 docker 安装方法，用一键脚本安装花了快 2 小时没搞定，docker 只用了 10 分钟不到就搞定了，业界良心啊。</p>
@@ -309,56 +309,6 @@
 <p>Seafile：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192311.png"></p>
 <p>参考：<a href="https://www.vpsjxw.com/vps_use/seafile_intro/">https://www.vpsjxw.com/vps_use/seafile_intro/</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>VPS教程：搭建个人网盘教程—kodexplorer</title>
-    <url>/vps/cb981a71.html</url>
-    <content><![CDATA[<p>kodexplorer网盘系统。Kodexplorer，也叫芒果云、可道云、kodcloud，总之名字改了不少。但其本身作为一个网盘文件系统，还是有很多可圈可点的地方。</p>
-<span id="more"></span>
-
-<p>seafile、h5ai、kodexplorer 三者的特点优劣势分析比较，参考<a href="https://zhuanlan.zhihu.com/p/262267678">《VPS 搭个人网盘，seafile、kodexplorer、h5ai 谁更合适？》</a></p>
-<h2 id="特点及优势"><a href="#特点及优势" class="headerlink" title="特点及优势"></a>特点及优势</h2><p>界面优美，基本上是仿 windows 的操作界面，而且有各种皮肤和语言可以选择，用起来很顺手，看起来很顺眼。</p>
-<p>安装简单，基于 php 环境，无需安装数据库，几分钟即可安装成功。</p>
-<p>功能丰富，除了一般网盘应有的功能，还包括 office 文件和文本文件在线编辑，文件共享，视频音频 office 等文件浏览，离线下载，用户系统等等。可以说相当不错了。</p>
-<h2 id="安装准备"><a href="#安装准备" class="headerlink" title="安装准备"></a>安装准备</h2><p>Apache/nginx+php 的 web 环境，可以参考<a href="https://zhuanlan.zhihu.com/p/262189089">一键安装脚本搭建LNMP/LAMP环境</a></p>
-<p>内存最小 512M，如果用来做个人网盘，建议磁盘空间大一点。</p>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><p>我用的是<a href="https://billing.virmach.com/aff.php?aff=9506">virmach</a>的存储型 vps，500G 磁盘仅需 3.5 刀每月。操作系统是 ubuntu14.04</p>
-<p>安装过程如下</p>
-<p>1、安装 Apache、php 及 php 相关扩展，重启 apache</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install apache2</span><br><span class="line"></span><br><span class="line">sudo apt-get install php5 libapache2-mod-php5 php5-gd</span><br><span class="line"></span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;apache2 restart</span><br></pre></td></tr></table></figure>
-
-
-
-<p>2、下载 KodExplorer 安装包到 Apache web 根目录/var/www/html，解压，更改读写权限</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;var&#x2F;www&#x2F;html</span><br><span class="line"></span><br><span class="line">wget http:&#x2F;&#x2F;static.kodcloud.com&#x2F;update&#x2F;download&#x2F;kodexplorer4.25.zip</span><br><span class="line"></span><br><span class="line">unzip -d .&#x2F;kodexplorer kodexplorer4.25.zip</span><br><span class="line"></span><br><span class="line">chmod -R 777 kodexplorer</span><br></pre></td></tr></table></figure>
-
-
-
-<p>3、重启 apache</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">service apache2 restart</span><br></pre></td></tr></table></figure>
-
-
-
-<p>4、访问 ip，或 ip+”/kodexlorer”，出现以下界面表示安装成功</p>
-<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192415.png"></p>
-<p>主界面如下图所示</p>
-<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192419.png"></p>
-<h2 id="去除版权及屏蔽自动更新"><a href="#去除版权及屏蔽自动更新" class="headerlink" title="去除版权及屏蔽自动更新"></a>去除版权及屏蔽自动更新</h2><p>很多人在安装完后，问怎么去版权，频闭自动更新。我在网上查了几种方法还是可行的。</p>
-<p><strong>去版权</strong></p>
-<p>css 文件/static/style/login.css，第 87 行，改为：<br><code>.common_footer&#123;display:none;&#125;</code></p>
-<p>css 文件/static/style/common.css，在最后添加：<br><code>.version_vip&#123;.version_vip&#123;display:none !important;&#125;</code></p>
-<p>css 文件/static/style/common.css，在最后添加：<br><code>.old_common_footer&#123;.common_footer&#123; display:none !important;&#125;</code></p>
-<p>template/common/footer.html 文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;”common_footer”&gt;&lt;div class&#x3D;”old_common_footer”&gt;【原来的版权信息】&lt;&#x2F;div&gt;，&lt;div class&#x3D;”new_common_footer”&gt;新的版权信息&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>另外还有标题栏的版权字样，可以通过修改 html 代码实现，进入/template 文件夹，去除所有页面中“$L[‘kod_power_by’]”内容，即可。</p>
-<p><strong>频闭自动更新</strong></p>
-<p>在 config/version.php 中将 4.25 这个值改为更大的值就可以了。</p>
-<p>另外，我本人就用的 kodexplorer 做个人网盘，做了不少修改，大家有不懂的可以留言。</p>
-<p>参考：<a href="https://www.vpsjxw.com/vps_use/vps_install_kodexplorer/">https://www.vpsjxw.com/vps_use/vps_install_kodexplorer/</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -414,6 +364,56 @@
 <blockquote>
 <p> 参考链接：<a href="https://www.cnblogs.com/wangchuanyang/p/6380970.html">https://www.cnblogs.com/wangchuanyang/p/6380970.html</a></p>
 </blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>VPS教程：搭建个人网盘教程—kodexplorer</title>
+    <url>/vps/cb981a71.html</url>
+    <content><![CDATA[<p>kodexplorer网盘系统。Kodexplorer，也叫芒果云、可道云、kodcloud，总之名字改了不少。但其本身作为一个网盘文件系统，还是有很多可圈可点的地方。</p>
+<span id="more"></span>
+
+<p>seafile、h5ai、kodexplorer 三者的特点优劣势分析比较，参考<a href="https://zhuanlan.zhihu.com/p/262267678">《VPS 搭个人网盘，seafile、kodexplorer、h5ai 谁更合适？》</a></p>
+<h2 id="特点及优势"><a href="#特点及优势" class="headerlink" title="特点及优势"></a>特点及优势</h2><p>界面优美，基本上是仿 windows 的操作界面，而且有各种皮肤和语言可以选择，用起来很顺手，看起来很顺眼。</p>
+<p>安装简单，基于 php 环境，无需安装数据库，几分钟即可安装成功。</p>
+<p>功能丰富，除了一般网盘应有的功能，还包括 office 文件和文本文件在线编辑，文件共享，视频音频 office 等文件浏览，离线下载，用户系统等等。可以说相当不错了。</p>
+<h2 id="安装准备"><a href="#安装准备" class="headerlink" title="安装准备"></a>安装准备</h2><p>Apache/nginx+php 的 web 环境，可以参考<a href="https://zhuanlan.zhihu.com/p/262189089">一键安装脚本搭建LNMP/LAMP环境</a></p>
+<p>内存最小 512M，如果用来做个人网盘，建议磁盘空间大一点。</p>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><p>我用的是<a href="https://billing.virmach.com/aff.php?aff=9506">virmach</a>的存储型 vps，500G 磁盘仅需 3.5 刀每月。操作系统是 ubuntu14.04</p>
+<p>安装过程如下</p>
+<p>1、安装 Apache、php 及 php 相关扩展，重启 apache</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install apache2</span><br><span class="line"></span><br><span class="line">sudo apt-get install php5 libapache2-mod-php5 php5-gd</span><br><span class="line"></span><br><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;apache2 restart</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2、下载 KodExplorer 安装包到 Apache web 根目录/var/www/html，解压，更改读写权限</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;var&#x2F;www&#x2F;html</span><br><span class="line"></span><br><span class="line">wget http:&#x2F;&#x2F;static.kodcloud.com&#x2F;update&#x2F;download&#x2F;kodexplorer4.25.zip</span><br><span class="line"></span><br><span class="line">unzip -d .&#x2F;kodexplorer kodexplorer4.25.zip</span><br><span class="line"></span><br><span class="line">chmod -R 777 kodexplorer</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3、重启 apache</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">service apache2 restart</span><br></pre></td></tr></table></figure>
+
+
+
+<p>4、访问 ip，或 ip+”/kodexlorer”，出现以下界面表示安装成功</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192415.png"></p>
+<p>主界面如下图所示</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192419.png"></p>
+<h2 id="去除版权及屏蔽自动更新"><a href="#去除版权及屏蔽自动更新" class="headerlink" title="去除版权及屏蔽自动更新"></a>去除版权及屏蔽自动更新</h2><p>很多人在安装完后，问怎么去版权，频闭自动更新。我在网上查了几种方法还是可行的。</p>
+<p><strong>去版权</strong></p>
+<p>css 文件/static/style/login.css，第 87 行，改为：<br><code>.common_footer&#123;display:none;&#125;</code></p>
+<p>css 文件/static/style/common.css，在最后添加：<br><code>.version_vip&#123;.version_vip&#123;display:none !important;&#125;</code></p>
+<p>css 文件/static/style/common.css，在最后添加：<br><code>.old_common_footer&#123;.common_footer&#123; display:none !important;&#125;</code></p>
+<p>template/common/footer.html 文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;”common_footer”&gt;&lt;div class&#x3D;”old_common_footer”&gt;【原来的版权信息】&lt;&#x2F;div&gt;，&lt;div class&#x3D;”new_common_footer”&gt;新的版权信息&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>另外还有标题栏的版权字样，可以通过修改 html 代码实现，进入/template 文件夹，去除所有页面中“$L[‘kod_power_by’]”内容，即可。</p>
+<p><strong>频闭自动更新</strong></p>
+<p>在 config/version.php 中将 4.25 这个值改为更大的值就可以了。</p>
+<p>另外，我本人就用的 kodexplorer 做个人网盘，做了不少修改，大家有不懂的可以留言。</p>
+<p>参考：<a href="https://www.vpsjxw.com/vps_use/vps_install_kodexplorer/">https://www.vpsjxw.com/vps_use/vps_install_kodexplorer/</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -959,6 +959,10 @@
 </tr>
 </tbody></table>
 ]]></content>
+      <tags>
+        <tag>vultr</tag>
+        <tag>机房选择</tag>
+      </tags>
   </entry>
   <entry>
     <title>Windows 和Linux 不同操作系统的VPS有哪些区别,选择哪种？</title>
