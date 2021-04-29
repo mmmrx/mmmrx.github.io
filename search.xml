@@ -4,9 +4,9 @@
     <title>2021年便宜VPS，最便宜的VPS排名</title>
     <url>/vps/cac29224.html</url>
     <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/111.jpg" alt="bathtub with water and flowers"></p>
-<span id="more"></span>
-
 <p><strong>站长自己来推荐一些便宜的VPS</strong>：</p>
+<span id="more"></span> 
+
 <h4 id="https-bandwagonhost-com-，-10Gbps带宽，CN2-GIA线路，超快直连国内"><a href="#https-bandwagonhost-com-，-10Gbps带宽，CN2-GIA线路，超快直连国内" class="headerlink" title="https://bandwagonhost.com ， 10Gbps带宽，CN2 GIA线路，超快直连国内"></a><a href="https://bwh81.net/aff.php?aff=032&gid=1">https://bandwagonhost.com</a> ， 10Gbps带宽，CN2 GIA线路，超快直连国内</h4><p>IT7旗下VPS品牌，VPS具有一键备份VPS、一键转移机房等自动化功能，目前有：<strong>香港</strong>、洛杉矶（<strong>CN2 GT,CN2 GIA</strong>），凤凰城，费利蒙，佛罗里达，荷兰，<strong>香港(三网直连，速度最好)<strong>，这6个可选机房。适合个人建站等），可以支付宝，</strong>官方网站</strong>：**<a href="https://bwh81.net/aff.php?aff=032&gid=1">www.bandwagonhost.com</a>**，<a href="https://www.zhujiceping.com/35326.html">促销优惠戳这里</a></p>
 <h4 id="https-www-vultr-com-，按小时计费，多机房的云主机"><a href="#https-www-vultr-com-，按小时计费，多机房的云主机" class="headerlink" title="https://www.vultr.com ，按小时计费，多机房的云主机"></a><strong><a href="https://www.vultr.com/?ref=8397741-6G">https://www.vultr.com</a></strong> ，按小时计费，多机房的云主机</h4><p>choopa旗下VPS品牌，目前在全球有<strong>16个机房</strong>（包括日本、新加坡、美国等），基于KVM虚拟，1000M端口，纯SSD硬盘，免费50G备份，后台允许购买Windows系统的VPS，免费50G备份空间，支持Alipay（<a href="https://www.zhujiceping.com/tag/%E6%94%AF%E4%BB%98%E5%AE%9D/">支付宝</a>等）、PayPal等。<strong>官方网站</strong>：**<a href="https://www.vultr.com/?ref=8397741-6G">www.vultr.com</a>**</p>
 <h4 id="https-www-racknerd-com-，价格便宜、大流量的KVM-VPS"><a href="#https-www-racknerd-com-，价格便宜、大流量的KVM-VPS" class="headerlink" title="**https://www.racknerd.com**，价格便宜、大流量的KVM VPS"></a>**<a href="https://my.racknerd.com/aff.php?aff=20">https://www.racknerd.com</a>**，价格便宜、大流量的KVM VPS</h4><p>提供美国洛杉矶（layerhost、multacom、sharktech）机房的VPS，提供大流量、大硬盘，支持PayPal、支付宝、微信等多种付款方式。其中multacom机房，电信走CN2 GT，联通直达机房（极佳），移动强制走联通链路，算是非CN2线路之外优化的相当不错的；sharktech机房自带60Gbps防御。</p>
@@ -45,15 +45,15 @@
   <entry>
     <title>VPS配置教程（简单易懂）</title>
     <url>/vps/8af4fe59.html</url>
-    <content><![CDATA[<hr>
-<p><strong>本文更新于2020.10.15，从注册到搭建都不难，一步步操作就行！</strong></p>
+    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210429170531.jpg"></p>
+<p>本文更新于2020.10.15，从注册到搭建都不难，一步步操作就行！</p>
+<span id="more"></span>
+
 <hr>
 <h3 id="搭建VPS教程很简单，整个教程分三步："><a href="#搭建VPS教程很简单，整个教程分三步：" class="headerlink" title="搭建VPS教程很简单，整个教程分三步："></a>搭建VPS教程很简单，整个教程分三步：</h3><p>第一步：购买VPS服务器</p>
 <p>第二步：部署VPS服务器</p>
 <p>第三步：加速VPS服务器</p>
 <hr>
-<span id="more"></span>
-
 <h2 id="第一步：购买VPS服务器"><a href="#第一步：购买VPS服务器" class="headerlink" title="第一步：购买VPS服务器"></a>第一步：购买VPS服务器</h2><p>VPS服务器需要选择国外的，首选国际知名的vultr，速度不错、稳定且性价比高，按小时计费，能够随时开通和删除服务器，新服务器即是新ip。</p>
 <p><strong>首先是vultr注册地址： <a href="https://www.vultr.com/?ref=8346335">https://www.vultr.com</a></strong><br>（全球有17个数据中心可选，kvm框架。）</p>
 <p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428170247.png" alt="2vultr注册.png"></p>
