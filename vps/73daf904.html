@@ -116,24 +116,34 @@
 
 <nav class="site-nav">
   <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
+        <li class="menu-item menu-item-foreign_server">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/foreign-server" rel="section"><i class="foreign-server fa-fw"></i>国外服务器推荐</a>
+
+  </li>
+        <li class="menu-item menu-item-foreign_vps">
+
+    <a href="/foreign-vps" rel="section"><i class="foreign-vps fa-fw"></i>国外VPS推荐</a>
+
+  </li>
+        <li class="menu-item menu-item-foreign_web_host">
+
+    <a href="/foreign-web-host" rel="section"><i class="foreign-web-host fa-fw"></i>国外虚拟主机</a>
+
+  </li>
+        <li class="menu-item menu-item-vps_course">
+
+    <a href="/vps-course" rel="section"><i class="vps-course fa-fw"></i>VPS教程</a>
+
+  </li>
+        <li class="menu-item menu-item-vps_test">
+
+    <a href="/vps-test" rel="section"><i class="vps-test fa-fw"></i>VPS测评</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
     <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -405,7 +415,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81BBR"><span class="nav-number">1.</span> <span class="nav-text">一、BBR</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%8B%E6%B0%B4%E8%84%9A%E6%9C%AC"><span class="nav-number">1.1.</span> <span class="nav-text">秋水脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debian9"><span class="nav-number">1.2.</span> <span class="nav-text">Debian9</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%94%90%E9%80%9F"><span class="nav-number">2.</span> <span class="nav-text">二、锐速</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81BBR%E9%AD%94%E6%94%B9%E7%89%88"><span class="nav-number">3.</span> <span class="nav-text">三、BBR魔改版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81Scalable-RE-Scalable-Reactive-%E4%B8%80%E4%B8%AA%E5%AE%9E%E9%AA%8C%E6%80%A7%E7%9A%84%E5%8D%95%E8%BE%B9%E5%8A%A0%E9%80%9F%E7%AE%97%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">四、Scalable-RE (Scalable-Reactive) : 一个实验性的单边加速算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%85%B6%E4%BB%96%E6%8E%A8%E8%8D%90"><span class="nav-number">5.</span> <span class="nav-text">五、其他推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81BBRPLUS%EF%BC%88%E6%9B%B4%E6%96%B0%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">六、BBRPLUS（更新）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E5%9B%9B%E5%90%88%E4%B8%80%E8%84%9A%E6%9C%AC"><span class="nav-number">7.</span> <span class="nav-text">七、四合一脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AB%E3%80%81TCPA"><span class="nav-number">8.</span> <span class="nav-text">八、TCPA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E3%80%81BBR2"><span class="nav-number">9.</span> <span class="nav-text">九、BBR2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%B6%E8%B4%B9%E5%8D%95%E8%BE%B9%E5%8A%A0%E9%80%9F%E8%BD%AF%E4%BB%B6"><span class="nav-number">10.</span> <span class="nav-text">收费单边加速软件</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -417,8 +426,7 @@
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
+          <a href="/archives">
           <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">日志</span>
         </a>
@@ -427,6 +435,76 @@
 </div>
 
 
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">美国服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">香港服务器(CN)</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">日本服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">韩国服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">亚洲服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">站群服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">ddos高防服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">不限流量服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">10Gbps带宽服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">外贸服务器怎么选</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">国外VPS-支付宝/微信付款</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">美国cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">香港cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">日本cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">韩国cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">欧洲cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">不限流量VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">windows VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">VPS云\云服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">大硬盘VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">ddos高防VPS</a>
+        </li>
+    </ul>
+  </div>
 
       </div>
 

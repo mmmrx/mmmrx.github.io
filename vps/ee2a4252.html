@@ -118,24 +118,34 @@
 
 <nav class="site-nav">
   <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
+        <li class="menu-item menu-item-foreign_server">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/foreign-server" rel="section"><i class="foreign-server fa-fw"></i>国外服务器推荐</a>
+
+  </li>
+        <li class="menu-item menu-item-foreign_vps">
+
+    <a href="/foreign-vps" rel="section"><i class="foreign-vps fa-fw"></i>国外VPS推荐</a>
+
+  </li>
+        <li class="menu-item menu-item-foreign_web_host">
+
+    <a href="/foreign-web-host" rel="section"><i class="foreign-web-host fa-fw"></i>国外虚拟主机</a>
+
+  </li>
+        <li class="menu-item menu-item-vps_course">
+
+    <a href="/vps-course" rel="section"><i class="vps-course fa-fw"></i>VPS教程</a>
+
+  </li>
+        <li class="menu-item menu-item-vps_test">
+
+    <a href="/vps-test" rel="section"><i class="vps-test fa-fw"></i>VPS测评</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
     <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -251,7 +261,7 @@
 <p>安装完后，运行以下命令。该命令可以下载 seafile docker 镜像，运行 seafile 容器即 seafile 服务。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name seafile \ </span><br><span class="line">        -e SEAFILE_SERVER_HOSTNAME&#x3D; seafile.example.com \  </span><br><span class="line">        -v &#x2F;opt&#x2F;seafile-data:&#x2F;shared \  </span><br><span class="line">        -p 80:80 \  </span><br><span class="line">        seafileltd&#x2F;seafile:latest</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>然后等几分钟访问 seafile.example.com，就可以看到登录界面了。默认账号/密码为 <a href="mailto:&#x6d;&#x65;&#64;&#x65;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;">&#x6d;&#x65;&#64;&#x65;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;</a>/asecret</p>
+<p>然后等几分钟访问 seafile.example.com，就可以看到登录界面了。默认账号/密码为 <a href="mailto:&#x6d;&#x65;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#x6d;&#x65;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a>/asecret</p>
 <p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192256.png"></p>
 <p>然后就可以愉快的玩耍了</p>
 <p>最后还是要强烈推荐下 docker 安装方法，用一键脚本安装花了快 2 小时没搞定，docker 只用了 10 分钟不到就搞定了，业界良心啊。</p>
@@ -345,7 +355,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87-docker-%E5%AE%89%E8%A3%85-seafile"><span class="nav-number">1.</span> <span class="nav-text">通过 docker 安装 seafile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#seafile-%E5%8A%9F%E8%83%BD%E4%BA%AE%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">seafile 功能亮点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#seafile-%E4%B8%8E-kodexplorer-%E7%AE%80%E5%8D%95%E5%AF%B9%E6%AF%94"><span class="nav-number">3.</span> <span class="nav-text">seafile 与 kodexplorer 简单对比</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -357,8 +366,7 @@
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
+          <a href="/archives">
           <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">日志</span>
         </a>
@@ -367,6 +375,76 @@
 </div>
 
 
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">美国服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">香港服务器(CN)</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">日本服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">韩国服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">亚洲服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">站群服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">ddos高防服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">不限流量服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">10Gbps带宽服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">外贸服务器怎么选</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">国外VPS-支付宝/微信付款</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">美国cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">香港cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">日本cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">韩国cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">欧洲cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">不限流量VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">windows VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">VPS云\云服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">大硬盘VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">ddos高防VPS</a>
+        </li>
+    </ul>
+  </div>
 
       </div>
 

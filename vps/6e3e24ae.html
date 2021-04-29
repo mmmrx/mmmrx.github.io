@@ -121,24 +121,34 @@
 
 <nav class="site-nav">
   <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
+        <li class="menu-item menu-item-foreign_server">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/foreign-server" rel="section"><i class="foreign-server fa-fw"></i>国外服务器推荐</a>
+
+  </li>
+        <li class="menu-item menu-item-foreign_vps">
+
+    <a href="/foreign-vps" rel="section"><i class="foreign-vps fa-fw"></i>国外VPS推荐</a>
+
+  </li>
+        <li class="menu-item menu-item-foreign_web_host">
+
+    <a href="/foreign-web-host" rel="section"><i class="foreign-web-host fa-fw"></i>国外虚拟主机</a>
+
+  </li>
+        <li class="menu-item menu-item-vps_course">
+
+    <a href="/vps-course" rel="section"><i class="vps-course fa-fw"></i>VPS教程</a>
+
+  </li>
+        <li class="menu-item menu-item-vps_test">
+
+    <a href="/vps-test" rel="section"><i class="vps-test fa-fw"></i>VPS测评</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
     <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -371,7 +381,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8E%A5%E4%B8%8B%E6%9D%A5%E5%B0%B1%E5%AF%B9VPS%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6SolusVM%E5%81%9A%E4%B8%80%E4%BA%9B%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">接下来就对VPS管理软件SolusVM做一些简单介绍和使用说明</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%99%BB%E5%BD%95SolusVM%E7%95%8C%E9%9D%A2%EF%BC%88%E5%8F%AF%E8%AE%BE%E7%BD%AE%E4%B8%BA%E4%B8%AD%E6%96%87%EF%BC%89%E4%BC%9A%E7%9C%8B%E5%88%B0%E4%BB%A5%E4%B8%8B%E7%95%8C%E9%9D%A2%EF%BC%9A"><span class="nav-number"></span> <span class="nav-text">一、登录SolusVM界面（可设置为中文）会看到以下界面：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%82%B9%E5%87%BB%E7%9B%B8%E5%BA%94VPS%E5%90%8E%E9%9D%A2%E7%9A%84%E2%80%9CManage%E2%80%9D%E5%B0%B1%E5%8F%AF%E4%BB%A5%E5%BC%80%E5%A7%8B%E7%AE%A1%E7%90%86VPS"><span class="nav-number"></span> <span class="nav-text">二、点击相应VPS后面的“Manage”就可以开始管理VPS:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-KVM-VPS"><span class="nav-number"></span> <span class="nav-text">(1)KVM VPS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-OpenVZ-VPS"><span class="nav-number"></span> <span class="nav-text">(2)OpenVZ VPS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-XEN-VPS"><span class="nav-number"></span> <span class="nav-text">(3)XEN VPS</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%87%A0%E7%82%B9%E8%AF%B4%E6%98%8E"><span class="nav-number"></span> <span class="nav-text">三、几点说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%85%B3%E4%BA%8EVPS%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F"><span class="nav-number"></span> <span class="nav-text">1. 关于VPS重装系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%85%B3%E4%BA%8EVPS%E4%BF%AE%E6%94%B9root%E5%AF%86%E7%A0%81%EF%BC%88%E8%AE%B0%E5%BE%97%E5%AE%9A%E6%9C%9F%E4%BF%AE%E6%94%B9%EF%BC%81%EF%BC%81%EF%BC%89"><span class="nav-number"></span> <span class="nav-text">2. 关于VPS修改root密码（记得定期修改！！）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%85%B3%E4%BA%8EConsole%E5%92%8CVNC"><span class="nav-number"></span> <span class="nav-text">3. 关于Console和VNC</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E5%AE%89%E8%A3%85%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%892%E7%A7%8D%E5%8A%9E%E6%B3%95%EF%BC%9A"><span class="nav-number"></span> <span class="nav-text">4.安装操作系统有2种办法：</span></a></div>
       </div>
       <!--/noindex-->
 
@@ -383,8 +392,7 @@
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
+          <a href="/archives">
           <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">日志</span>
         </a>
@@ -393,6 +401,76 @@
 </div>
 
 
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">美国服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">香港服务器(CN)</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">日本服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">韩国服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">亚洲服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">站群服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">ddos高防服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">不限流量服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">10Gbps带宽服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">外贸服务器怎么选</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">国外VPS-支付宝/微信付款</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">美国cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">香港cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">日本cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">韩国cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">欧洲cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">不限流量VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">windows VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">VPS云\云服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">大硬盘VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">ddos高防VPS</a>
+        </li>
+    </ul>
+  </div>
 
       </div>
 

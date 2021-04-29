@@ -130,24 +130,34 @@
 
 <nav class="site-nav">
   <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
+        <li class="menu-item menu-item-foreign_server">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/foreign-server" rel="section"><i class="foreign-server fa-fw"></i>国外服务器推荐</a>
+
+  </li>
+        <li class="menu-item menu-item-foreign_vps">
+
+    <a href="/foreign-vps" rel="section"><i class="foreign-vps fa-fw"></i>国外VPS推荐</a>
+
+  </li>
+        <li class="menu-item menu-item-foreign_web_host">
+
+    <a href="/foreign-web-host" rel="section"><i class="foreign-web-host fa-fw"></i>国外虚拟主机</a>
+
+  </li>
+        <li class="menu-item menu-item-vps_course">
+
+    <a href="/vps-course" rel="section"><i class="vps-course fa-fw"></i>VPS教程</a>
+
+  </li>
+        <li class="menu-item menu-item-vps_test">
+
+    <a href="/vps-test" rel="section"><i class="vps-test fa-fw"></i>VPS测评</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
     <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -419,7 +429,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%AD%E5%BB%BAVPS%E6%95%99%E7%A8%8B%E5%BE%88%E7%AE%80%E5%8D%95%EF%BC%8C%E6%95%B4%E4%B8%AA%E6%95%99%E7%A8%8B%E5%88%86%E4%B8%89%E6%AD%A5%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">搭建VPS教程很简单，整个教程分三步：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E8%B4%AD%E4%B9%B0VPS%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number"></span> <span class="nav-text">第一步：购买VPS服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%82%B9%E5%87%BB%E5%9B%BE%E4%B8%AD%E7%9A%84CentOS%E5%87%A0%E4%B8%AA%E5%AD%97%EF%BC%8C%E4%BC%9A%E5%BC%B9%E5%87%BAcentos6%EF%BC%8C%E7%84%B6%E5%90%8E%E9%80%89%E4%B8%ADcentos6%EF%BC%81-%EF%BC%88%E4%B8%8D%E8%A6%81%E9%80%89%E9%BB%98%E8%AE%A4%E7%9A%84centos8%EF%BC%8C%E8%84%9A%E6%9C%AC%E4%B8%8D%E6%94%AF%E6%8C%81centos8%EF%BC%81%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">点击图中的CentOS几个字，会弹出centos6，然后选中centos6！ （不要选默认的centos8，脚本不支持centos8！）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E9%83%A8%E7%BD%B2VPS%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number"></span> <span class="nav-text">第二步：部署VPS服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E6%9E%9Cxshell%E8%BF%9E%E4%B8%8D%E4%B8%8A%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E6%B2%A1%E6%9C%89%E5%BC%B9%E5%87%BA%E8%AE%A9%E4%BD%A0%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%BE%93%E5%85%A5%E6%A1%86%EF%BC%8C%E8%A1%A8%E6%98%8E%E4%BD%A0%E5%BC%80%E5%88%B0%E7%9A%84ip%E6%98%AF%E4%B8%80%E4%B8%AA%E8%A2%AB%E5%A2%99%E7%9A%84ip%EF%BC%8C%E9%81%87%E5%88%B0%E8%BF%99%E7%A7%8D%E6%83%85%E5%86%B5%EF%BC%8C%E9%87%8D%E6%96%B0%E5%BC%80%E6%96%B0%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E7%9B%B4%E5%88%B0%E8%83%BD%E7%94%A8xshell%E8%BF%9E%E4%B8%8A%E4%B8%BA%E6%AD%A2%EF%BC%8C%E8%80%90%E5%BF%83%E7%82%B9%E5%93%A6%EF%BC%81%E5%A6%82%E6%9E%9C%E5%90%8C%E4%B8%80%E4%B8%AA%E5%9C%B0%E5%8C%BA%E5%BC%80%E4%BA%86%E5%A4%9A%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%98%E6%98%AF%E4%B8%8D%E8%A1%8C%E7%9A%84%E8%AF%9D%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%8D%A2%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%E3%80%82"><span class="nav-number">1.</span> <span class="nav-text">如果xshell连不上服务器，没有弹出让你输入用户名和密码的输入框，表明你开到的ip是一个被墙的ip，遇到这种情况，重新开新的服务器，直到能用xshell连上为止，耐心点哦！如果同一个地区开了多台服务器还是不行的话，可以换其它地区。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E4%B8%80%E9%94%AE%E5%8A%A0%E9%80%9FVPS%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number"></span> <span class="nav-text">第三步：一键加速VPS服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEBBR%E5%8A%A0%E9%80%9F"><span class="nav-number">1.</span> <span class="nav-text">配置BBR加速</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFBBR%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">什么是BBR：</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -431,8 +440,7 @@
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
+          <a href="/archives">
           <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">日志</span>
         </a>
@@ -441,6 +449,76 @@
 </div>
 
 
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">美国服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">香港服务器(CN)</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">日本服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">韩国服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">亚洲服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">站群服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">ddos高防服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">不限流量服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">10Gbps带宽服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">外贸服务器怎么选</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">国外VPS-支付宝/微信付款</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">美国cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">香港cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">日本cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">韩国cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">欧洲cn2 gia VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">不限流量VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">windows VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">VPS云\云服务器</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">大硬盘VPS</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://vps688.com/" title="http:&#x2F;&#x2F;vps688.com">ddos高防VPS</a>
+        </li>
+    </ul>
+  </div>
 
       </div>
 
