@@ -148,6 +148,125 @@
       </tags>
   </entry>
   <entry>
+    <title>Vultr机房测速教程</title>
+    <url>/vps/385ae660.html</url>
+    <content><![CDATA[<p>我们使用<a href="https://www.vultr.com/?ref=8346337-4F">Vultr</a>时候，通常会根据自己地地区测试一下哪个机房快，因此常有以下问题：</p>
+<ul>
+<li><p>VULTR哪个机房快？</p>
+</li>
+<li><p>VULTR哪个机房延迟低？</p>
+</li>
+<li><p>VULTR测速地址是什么？</p>
+<span id="more"></span>
+
+<p>本文总结VULTR全球15个机房的官方测速地址，方便大家测试各个节点服务器的ping延时和文件下载速度。</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Vultr新用户充10得免费50美元</strong>：<a href="https://www.vultr.com/promo/try50/?ref=8346337-4F">https://www.vultr.com/promo/try50/</a></p>
+</blockquote>
+<h2 id="一、VULTR各节点服务器官方测速地址"><a href="#一、VULTR各节点服务器官方测速地址" class="headerlink" title="一、VULTR各节点服务器官方测速地址"></a><strong>一、VULTR各节点服务器官方测速地址</strong></h2><table>
+<thead>
+<tr>
+<th>地理位置</th>
+<th>官方测试服务器地址</th>
+<th>文件下载测试地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(Asia)Seoul, Korea[韩国 首尔]</td>
+<td><a href="http://ping.chinaz.com/sel-kor-ping.vultr.com">sel-kor-ping.vultr.com</a></td>
+<td><a href="http://sel-kor-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a href="http://sel-kor-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>(Asia)Tokyo, Japan[日本 东京]</td>
+<td><a href="http://ping.chinaz.com/hnd-jp-ping.vultr.com">hnd-jp-ping.vultr.com</a></td>
+<td><a href="http://hnd-jp-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a href="http://hnd-jp-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>Singapore[新加坡]</td>
+<td><a href="http://ping.chinaz.com/sgp-ping.vultr.com">sgp-ping.vultr.com</a></td>
+<td><a href="http://sgp-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a href="http://sgp-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>(AU) Sydney, Australia[悉尼]</td>
+<td><a href="http://ping.chinaz.com/syd-au-ping.vultr.com">syd-au-ping.vultr.com</a></td>
+<td><a href="http://syd-au-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a href="http://syd-au-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>(EU) Frankfurt, DE[德国 法兰克福]</td>
+<td><a href="http://ping.chinaz.com/fra-de-ping.vultr.com">fra-de-ping.vultr.com</a></td>
+<td><a href="http://fra-de-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a href="http://fra-de-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>(EU) Amsterdam, NL[荷兰 阿姆斯特丹]</td>
+<td><a href="http://ping.chinaz.com/ams-nl-ping.vultr.com">ams-nl-ping.vultr.com</a></td>
+<td><a href="http://ams-nl-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a href="http://ams-nl-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>(EU) London, UK[英国 伦敦]</td>
+<td><a href="http://ping.chinaz.com/lon-gb-ping.vultr.com">lon-gb-ping.vultr.com</a></td>
+<td><a href="http://lon-gb-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a href="http://lon-gb-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>(EU) Paris, France[法国 巴黎]</td>
+<td><a href="http://ping.chinaz.com/par-fr-ping.vultr.com">par-fr-ping.vultr.com</a></td>
+<td><a href="http://par-fr-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a href="http://par-fr-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>Seattle, Washington[美东 华盛顿州 西雅图]</td>
+<td><a href="http://ping.chinaz.com/wa-us-ping.vultr.com">wa-us-ping.vultr.com</a></td>
+<td><a href="http://wa-us-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a href="http://wa-us-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>Silicon Valley, Ca[美西 加州 硅谷]</td>
+<td><a href="http://ping.chinaz.com/sjo-ca-us-ping.vultr.com">sjo-ca-us-ping.vultr.com</a></td>
+<td><a href="http://sjo-ca-us-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a href="http://sjo-ca-us-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>Los Angeles, Ca[美西 加州 洛杉矶]</td>
+<td><a href="http://ping.chinaz.com/lax-ca-us-ping.vultr.com">lax-ca-us-ping.vultr.com</a></td>
+<td><a href="http://lax-ca-us-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a href="http://lax-ca-us-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>Chicago, Illinois[美东 芝加哥]</td>
+<td><a href="http://ping.chinaz.com/il-us-ping.vultr.com">il-us-ping.vultr.com</a></td>
+<td><a href="http://il-us-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a href="http://il-us-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>Dallas, Texas[美中 德克萨斯州 达拉斯]</td>
+<td><a href="http://ping.chinaz.com/tx-us-ping.vultr.com">tx-us-ping.vultr.com</a></td>
+<td><a href="http://tx-us-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a href="http://tx-us-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>New York / New Jersey[美东 新泽西]</td>
+<td><a href="http://ping.chinaz.com/nj-us-ping.vultr.com">nj-us-ping.vultr.com</a></td>
+<td><a href="http://nj-us-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a href="http://nj-us-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>Atlanta, Georgiaa[美东 乔治亚州 亚特兰大]</td>
+<td><a href="http://ping.chinaz.com/ga-us-ping.vultr.com">ga-us-ping.vultr.com</a></td>
+<td><a href="http://ga-us-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a href="http://ga-us-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+<tr>
+<td>Miami, Florida[美东 佛罗里达州 迈阿密]</td>
+<td><a href="http://ping.chinaz.com/fl-us-ping.vultr.com">fl-us-ping.vultr.com</a></td>
+<td><a href="http://fl-us-ping.vultr.com/vultr.com.100MB.bin">100MB</a> <a href="http://fl-us-ping.vultr.com/vultr.com.1000MB.bin">1GB</a></td>
+</tr>
+</tbody></table>
+<h2 id="二、测速方法"><a href="#二、测速方法" class="headerlink" title="二、测速方法"></a><strong>二、测速方法</strong></h2><h3 id="Ping延时测试"><a href="#Ping延时测试" class="headerlink" title="Ping延时测试"></a><strong>Ping延时测试</strong></h3><p>直接点击表格中<strong>官方测速服务器地址</strong>即可进行全国Ping延时测试。当然，你也可以自己通过ping命令（例如日本服务器：ping hnd-jp-ping.vultr.com）测试某个指定节点的延时。（Windows用户在cmd中运行，Mac/Linux用户打开终端执行）</p>
+<h3 id="文件下载测试"><a href="#文件下载测试" class="headerlink" title="文件下载测试"></a><strong>文件下载测试</strong></h3><p>直接点击表格中<strong>文件下载测速地址</strong>中的链接即可，100MB/1GB表示下载文件的大小。</p>
+]]></content>
+      <categories>
+        <category>VPS测评</category>
+      </categories>
+      <tags>
+        <tag>vultr</tag>
+        <tag>机房</tag>
+        <tag>测速</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>不限流量服务器</title>
     <url>/vps/4063b7dc.html</url>
     <content><![CDATA[<p>大流量服务器、不限流量服务器、美国不限流量服务器、亚洲不限流量服务器等，收集一些不限制流量的独立服务器，有些支持支付宝，方便大家购买！</p>
@@ -561,7 +680,7 @@
   <entry>
     <title>10Gbps带宽服务器</title>
     <url>/vps/5790ebd9.html</url>
-    <content><![CDATA[<p>大带宽服务器，10Gbps带宽服务器，美国大带宽服务器，欧洲大带宽服务器，日本、香港大带宽服务器，不限流量服务器，直连大带宽服务器，适合跑流量，无需备案！联系站长：<a href="mailto:&#x6d;&#97;&#x69;&#108;&#x40;&#122;&#104;&#117;&#106;&#105;&#99;&#101;&#112;&#105;&#x6e;&#x67;&#x2e;&#x63;&#111;&#x6d;">&#x6d;&#97;&#x69;&#108;&#x40;&#122;&#104;&#117;&#106;&#105;&#99;&#101;&#112;&#105;&#x6e;&#x67;&#x2e;&#x63;&#111;&#x6d;</a></p>
+    <content><![CDATA[<p>大带宽服务器，10Gbps带宽服务器，美国大带宽服务器，欧洲大带宽服务器，日本、香港大带宽服务器，不限流量服务器，直连大带宽服务器，适合跑流量，无需备案！联系站长：<a href="mailto:&#x6d;&#97;&#105;&#108;&#x40;&#122;&#x68;&#117;&#106;&#105;&#x63;&#x65;&#112;&#x69;&#110;&#x67;&#x2e;&#x63;&#111;&#x6d;">&#x6d;&#97;&#105;&#108;&#x40;&#122;&#x68;&#117;&#106;&#105;&#x63;&#x65;&#112;&#x69;&#110;&#x67;&#x2e;&#x63;&#111;&#x6d;</a></p>
  <span id="more"></span>
 
 <h4 id="https-www-raksmart-com，圣何塞，10Gbps接入，三网直连，大陆优化"><a href="#https-www-raksmart-com，圣何塞，10Gbps接入，三网直连，大陆优化" class="headerlink" title="https://www.raksmart.com，圣何塞，10Gbps接入，三网直连，大陆优化"></a><a href="https://billing.raksmart.com/whmcs/aff.php?aff=1296">https://www.raksmart.com</a>，圣何塞，10Gbps接入，三网直连，大陆优化</h4><p>成立于2000年，在加州和硅谷建立了自己的机房，目主要运作美国、香港、日本、韩国等的独立服务器的出租和设备托管、云主机、300GbpsDDoS高防、网络接入等业务。目前网络有：国际BGP、中国大陆优化、精品网络（CN2+BGP）、CN2 ONL（三网纯CN2 gia）等特别针对中国的高端优化线路，单机支持最高10Gbps带宽（包括不限流量）、300Gbps高防、多台服务器组件内网、开启免费CC防御。额外支持多IP段的站群服务器、GPU服务器、CDN服务器、10Gbps带宽服务器，**<a href="https://www.zhujiceping.com/38094.html">戳这里</a>**！最新优惠，请联系站长！</p>
@@ -1861,7 +1980,7 @@
 <p>安装完后，运行以下命令。该命令可以下载 seafile docker 镜像，运行 seafile 容器即 seafile 服务。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name seafile \ </span><br><span class="line">        -e SEAFILE_SERVER_HOSTNAME&#x3D; seafile.example.com \  </span><br><span class="line">        -v &#x2F;opt&#x2F;seafile-data:&#x2F;shared \  </span><br><span class="line">        -p 80:80 \  </span><br><span class="line">        seafileltd&#x2F;seafile:latest</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>然后等几分钟访问 seafile.example.com，就可以看到登录界面了。默认账号/密码为 <a href="mailto:&#x6d;&#x65;&#64;&#x65;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#x6d;&#x65;&#64;&#x65;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a>/asecret</p>
+<p>然后等几分钟访问 seafile.example.com，就可以看到登录界面了。默认账号/密码为 <a href="mailto:&#x6d;&#x65;&#64;&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#101;&#46;&#99;&#111;&#109;">&#x6d;&#x65;&#64;&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#101;&#46;&#99;&#111;&#109;</a>/asecret</p>
 <p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192256.png"></p>
 <p>然后就可以愉快的玩耍了</p>
 <p>最后还是要强烈推荐下 docker 安装方法，用一键脚本安装花了快 2 小时没搞定，docker 只用了 10 分钟不到就搞定了，业界良心啊。</p>
