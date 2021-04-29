@@ -561,7 +561,7 @@
   <entry>
     <title>10Gbps带宽服务器</title>
     <url>/vps/5790ebd9.html</url>
-    <content><![CDATA[<p>大带宽服务器，10Gbps带宽服务器，美国大带宽服务器，欧洲大带宽服务器，日本、香港大带宽服务器，不限流量服务器，直连大带宽服务器，适合跑流量，无需备案！联系站长：<a href="mailto:&#109;&#97;&#105;&#108;&#64;&#x7a;&#x68;&#117;&#106;&#x69;&#x63;&#x65;&#x70;&#x69;&#x6e;&#103;&#46;&#x63;&#x6f;&#x6d;">&#109;&#97;&#105;&#108;&#64;&#x7a;&#x68;&#117;&#106;&#x69;&#x63;&#x65;&#x70;&#x69;&#x6e;&#103;&#46;&#x63;&#x6f;&#x6d;</a></p>
+    <content><![CDATA[<p>大带宽服务器，10Gbps带宽服务器，美国大带宽服务器，欧洲大带宽服务器，日本、香港大带宽服务器，不限流量服务器，直连大带宽服务器，适合跑流量，无需备案！联系站长：<a href="mailto:&#109;&#x61;&#105;&#x6c;&#x40;&#x7a;&#104;&#x75;&#106;&#x69;&#99;&#x65;&#112;&#105;&#110;&#103;&#x2e;&#99;&#111;&#109;">&#109;&#x61;&#105;&#x6c;&#x40;&#x7a;&#104;&#x75;&#106;&#x69;&#99;&#x65;&#112;&#105;&#110;&#103;&#x2e;&#99;&#111;&#109;</a></p>
  <span id="more"></span>
 
 <h4 id="https-www-raksmart-com，圣何塞，10Gbps接入，三网直连，大陆优化"><a href="#https-www-raksmart-com，圣何塞，10Gbps接入，三网直连，大陆优化" class="headerlink" title="https://www.raksmart.com，圣何塞，10Gbps接入，三网直连，大陆优化"></a><a href="https://billing.raksmart.com/whmcs/aff.php?aff=1296">https://www.raksmart.com</a>，圣何塞，10Gbps接入，三网直连，大陆优化</h4><p>成立于2000年，在加州和硅谷建立了自己的机房，目主要运作美国、香港、日本、韩国等的独立服务器的出租和设备托管、云主机、300GbpsDDoS高防、网络接入等业务。目前网络有：国际BGP、中国大陆优化、精品网络（CN2+BGP）、CN2 ONL（三网纯CN2 gia）等特别针对中国的高端优化线路，单机支持最高10Gbps带宽（包括不限流量）、300Gbps高防、多台服务器组件内网、开启免费CC防御。额外支持多IP段的站群服务器、GPU服务器、CDN服务器、10Gbps带宽服务器，**<a href="https://www.zhujiceping.com/38094.html">戳这里</a>**！最新优惠，请联系站长！</p>
@@ -1861,7 +1861,7 @@
 <p>安装完后，运行以下命令。该命令可以下载 seafile docker 镜像，运行 seafile 容器即 seafile 服务。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d --name seafile \ </span><br><span class="line">        -e SEAFILE_SERVER_HOSTNAME&#x3D; seafile.example.com \  </span><br><span class="line">        -v &#x2F;opt&#x2F;seafile-data:&#x2F;shared \  </span><br><span class="line">        -p 80:80 \  </span><br><span class="line">        seafileltd&#x2F;seafile:latest</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>然后等几分钟访问 seafile.example.com，就可以看到登录界面了。默认账号/密码为 <a href="mailto:&#x6d;&#101;&#64;&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#x6d;&#101;&#64;&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a>/asecret</p>
+<p>然后等几分钟访问 seafile.example.com，就可以看到登录界面了。默认账号/密码为 <a href="mailto:&#x6d;&#x65;&#64;&#101;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;">&#x6d;&#x65;&#64;&#101;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;</a>/asecret</p>
 <p><img src="https://cdn.jsdelivr.net/gh/mmmrx/picture/BlogImg/20210428192256.png"></p>
 <p>然后就可以愉快的玩耍了</p>
 <p>最后还是要强烈推荐下 docker 安装方法，用一键脚本安装花了快 2 小时没搞定，docker 只用了 10 分钟不到就搞定了，业界良心啊。</p>
