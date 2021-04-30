@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+<!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -10,14 +8,14 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"vps688.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"vps688.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="linux常用命令备忘录，记得收藏~">
@@ -76,13 +74,13 @@
   </style>
 </noscript>
 
-</head>
+<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');</script></head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+<body itemscope="" itemtype="http://schema.org/WebPage">
+  <div class="container">
     <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏">
@@ -155,9 +153,7 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
+    <input autocomplete="off" autocapitalize="off" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
@@ -189,16 +185,16 @@
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://vps688.com/vps/8df92976.html">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="">
       <meta itemprop="description" content="">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="VPS 688">
     </span>
       <header class="post-header">
@@ -248,92 +244,92 @@
 <span id="more"></span>
 
 <h3 id="1、cd命令"><a href="#1、cd命令" class="headerlink" title="1、cd命令"></a>1、cd命令</h3><p>这是一个非常基本，也是大家经常需要使用的命令，它用于切换当前目录，它的参数是要切换到的目录的路径，可以是绝对路径，也可以是相对路径。如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;root&#x2F;Docements # 切换到目录&#x2F;root&#x2F;Docements</span><br><span class="line">cd .&#x2F;path          # 切换到当前目录下的path目录中，“.”表示当前目录  </span><br><span class="line">cd ..&#x2F;path         # 切换到上层目录中的path目录中，“..”表示上一层目录</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /root/Docements # 切换到目录/root/Docements</span><br><span class="line">cd ./path          # 切换到当前目录下的path目录中，“.”表示当前目录  </span><br><span class="line">cd ../path         # 切换到上层目录中的path目录中，“..”表示上一层目录</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="2、ls命令"><a href="#2、ls命令" class="headerlink" title="2、ls命令"></a>2、ls命令</h3><p>这是一个非常有用的查看文件与目录的命令，list之意，它的参数非常多，下面就列出一些我常用的参数吧，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-l ：列出长数据串，包含文件的属性与权限数据等</span><br><span class="line">-a ：列出全部的文件，连同隐藏文件（开头为.的文件）一起列出来（常用）</span><br><span class="line">-d ：仅列出目录本身，而不是列出目录的文件数据</span><br><span class="line">-h ：将文件容量以较易读的方式（GB，kB等）列出来</span><br><span class="line">-R ：连同子目录的内容一起列出（递归列出），等于该目录下的所有文件都会显示出来</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-l ：列出长数据串，包含文件的属性与权限数据等</span><br><span class="line">-a ：列出全部的文件，连同隐藏文件（开头为.的文件）一起列出来（常用）</span><br><span class="line">-d ：仅列出目录本身，而不是列出目录的文件数据</span><br><span class="line">-h ：将文件容量以较易读的方式（GB，kB等）列出来</span><br><span class="line">-R ：连同子目录的内容一起列出（递归列出），等于该目录下的所有文件都会显示出来</span><br></pre></td></tr></tbody></table></figure>
 
 <p><strong>注：这些参数也可以组合使用</strong>，下面举两个例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls -l #以长数据串的形式列出当前目录下的数据文件和目录</span><br><span class="line">ls -lR #以长数据串的形式列出当前目录下的所有文件</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls -l #以长数据串的形式列出当前目录下的数据文件和目录</span><br><span class="line">ls -lR #以长数据串的形式列出当前目录下的所有文件</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="3、grep命令"><a href="#3、grep命令" class="headerlink" title="3、grep命令"></a>3、grep命令</h3><p>该命令常用于分析一行的信息，若当中有我们所需要的信息，就将该行显示出来，该命令通常与管道命令一起使用，用于对一些命令的输出进行筛选加工等等，它的简单语法为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep [-acinv] [--color&#x3D;auto] &#39;查找字符串&#39; filename</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep [-acinv] [--color=auto] '查找字符串' filename</span><br></pre></td></tr></tbody></table></figure>
 
 
 
 <p>它的常用参数如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-a ：将binary文件以text文件的方式查找数据</span><br><span class="line">-c ：计算找到‘查找字符串’的次数</span><br><span class="line">-i ：忽略大小写的区别，即把大小写视为相同</span><br><span class="line">-v ：反向选择，即显示出没有‘查找字符串’内容的那一行</span><br><span class="line"># 例如：</span><br><span class="line"># 取出文件&#x2F;etc&#x2F;man.config中包含MANPATH的行，并把找到的关键字加上颜色</span><br><span class="line">grep --color&#x3D;auto &#39;MANPATH&#39; &#x2F;etc&#x2F;man.config</span><br><span class="line"># 把ls -l的输出中包含字母file（不区分大小写）的内容输出</span><br><span class="line">ls -l | grep -i file</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-a ：将binary文件以text文件的方式查找数据</span><br><span class="line">-c ：计算找到‘查找字符串’的次数</span><br><span class="line">-i ：忽略大小写的区别，即把大小写视为相同</span><br><span class="line">-v ：反向选择，即显示出没有‘查找字符串’内容的那一行</span><br><span class="line"># 例如：</span><br><span class="line"># 取出文件/etc/man.config中包含MANPATH的行，并把找到的关键字加上颜色</span><br><span class="line">grep --color=auto 'MANPATH' /etc/man.config</span><br><span class="line"># 把ls -l的输出中包含字母file（不区分大小写）的内容输出</span><br><span class="line">ls -l | grep -i file</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="4、find命令"><a href="#4、find命令" class="headerlink" title="4、find命令"></a>4、find命令</h3><p>find是一个基于查找的功能非常强大的命令，相对而言，它的使用也相对较为复杂，参数也比较多，所以在这里将给把它们分类列出，它的基本语法如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">find [PATH] [option] [action]</span><br><span class="line"></span><br><span class="line"># 与时间有关的参数：</span><br><span class="line">-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件；</span><br><span class="line">-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名；</span><br><span class="line">-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名；</span><br><span class="line">-newer file : 列出比file还要新的文件名</span><br><span class="line"># 例如：</span><br><span class="line">find &#x2F;root -mtime 0 # 在当前目录下查找今天之内有改动的文件</span><br><span class="line"></span><br><span class="line"># 与用户或用户组名有关的参数：</span><br><span class="line">-user name : 列出文件所有者为name的文件</span><br><span class="line">-group name : 列出文件所属用户组为name的文件</span><br><span class="line">-uid n : 列出文件所有者为用户ID为n的文件</span><br><span class="line">-gid n : 列出文件所属用户组为用户组ID为n的文件</span><br><span class="line"># 例如：</span><br><span class="line">find &#x2F;home&#x2F;ljianhui -user ljianhui # 在目录&#x2F;home&#x2F;ljianhui中找出所有者为ljianhui的文件</span><br><span class="line"></span><br><span class="line"># 与文件权限及名称有关的参数：</span><br><span class="line">-name filename ：找出文件名为filename的文件</span><br><span class="line">-size [+-]SIZE ：找出比SIZE还要大（+）或小（-）的文件</span><br><span class="line">-tpye TYPE ：查找文件的类型为TYPE的文件，TYPE的值主要有：一般文件（f)、设备文件（b、c）、</span><br><span class="line">             目录（d）、连接文件（l）、socket（s）、FIFO管道文件（p）；</span><br><span class="line">-perm mode ：查找文件权限刚好等于mode的文件，mode用数字表示，如0755；</span><br><span class="line">-perm -mode ：查找文件权限必须要全部包括mode权限的文件，mode用数字表示</span><br><span class="line">-perm +mode ：查找文件权限包含任一mode的权限的文件，mode用数字表示</span><br><span class="line"># 例如：</span><br><span class="line">find &#x2F; -name passwd # 查找文件名为passwd的文件</span><br><span class="line">find . -perm 0755 # 查找当前目录中文件权限的0755的文件</span><br><span class="line">find . -size +12k # 查找当前目录中大于12KB的文件，注意c表示byte</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">find [PATH] [option] [action]</span><br><span class="line"></span><br><span class="line"># 与时间有关的参数：</span><br><span class="line">-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件；</span><br><span class="line">-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名；</span><br><span class="line">-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名；</span><br><span class="line">-newer file : 列出比file还要新的文件名</span><br><span class="line"># 例如：</span><br><span class="line">find /root -mtime 0 # 在当前目录下查找今天之内有改动的文件</span><br><span class="line"></span><br><span class="line"># 与用户或用户组名有关的参数：</span><br><span class="line">-user name : 列出文件所有者为name的文件</span><br><span class="line">-group name : 列出文件所属用户组为name的文件</span><br><span class="line">-uid n : 列出文件所有者为用户ID为n的文件</span><br><span class="line">-gid n : 列出文件所属用户组为用户组ID为n的文件</span><br><span class="line"># 例如：</span><br><span class="line">find /home/ljianhui -user ljianhui # 在目录/home/ljianhui中找出所有者为ljianhui的文件</span><br><span class="line"></span><br><span class="line"># 与文件权限及名称有关的参数：</span><br><span class="line">-name filename ：找出文件名为filename的文件</span><br><span class="line">-size [+-]SIZE ：找出比SIZE还要大（+）或小（-）的文件</span><br><span class="line">-tpye TYPE ：查找文件的类型为TYPE的文件，TYPE的值主要有：一般文件（f)、设备文件（b、c）、</span><br><span class="line">             目录（d）、连接文件（l）、socket（s）、FIFO管道文件（p）；</span><br><span class="line">-perm mode ：查找文件权限刚好等于mode的文件，mode用数字表示，如0755；</span><br><span class="line">-perm -mode ：查找文件权限必须要全部包括mode权限的文件，mode用数字表示</span><br><span class="line">-perm +mode ：查找文件权限包含任一mode的权限的文件，mode用数字表示</span><br><span class="line"># 例如：</span><br><span class="line">find / -name passwd # 查找文件名为passwd的文件</span><br><span class="line">find . -perm 0755 # 查找当前目录中文件权限的0755的文件</span><br><span class="line">find . -size +12k # 查找当前目录中大于12KB的文件，注意c表示byte</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="5、cp命令"><a href="#5、cp命令" class="headerlink" title="5、cp命令"></a>5、cp命令</h3><p>该命令用于复制文件，copy之意，它还可以把多个文件一次性地复制到一个目录下， 它的常用参数如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-a ：将文件的特性一起复制</span><br><span class="line">-p ：连同文件的属性一起复制，而非使用默认方式，与-a相似，常用于备份</span><br><span class="line">-i ：若目标文件已经存在时，在覆盖时会先询问操作的进行</span><br><span class="line">-r ：递归持续复制，用于目录的复制行为</span><br><span class="line">-u ：目标文件与源文件有差异时才会复制</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-a ：将文件的特性一起复制</span><br><span class="line">-p ：连同文件的属性一起复制，而非使用默认方式，与-a相似，常用于备份</span><br><span class="line">-i ：若目标文件已经存在时，在覆盖时会先询问操作的进行</span><br><span class="line">-r ：递归持续复制，用于目录的复制行为</span><br><span class="line">-u ：目标文件与源文件有差异时才会复制</span><br></pre></td></tr></tbody></table></figure>
 
 <p>例如 ：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp -a file1 file2 #连同文件的所有特性把文件file1复制成文件file2</span><br><span class="line">cp file1 file2 file3 dir #把文件file1、file2、file3复制到目录dir中</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp -a file1 file2 #连同文件的所有特性把文件file1复制成文件file2</span><br><span class="line">cp file1 file2 file3 dir #把文件file1、file2、file3复制到目录dir中</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="6、mv命令"><a href="#6、mv命令" class="headerlink" title="6、mv命令"></a>6、mv命令</h3><p>该命令用于移动文件、目录或更名，move之意，它的常用参数如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-f ：force强制的意思，如果目标文件已经存在，不会询问而直接覆盖-i ：若目标文件已经存在，就会询问是否覆盖-u ：若目标文件已经存在，且比目标文件新，才会更新</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-f ：force强制的意思，如果目标文件已经存在，不会询问而直接覆盖-i ：若目标文件已经存在，就会询问是否覆盖-u ：若目标文件已经存在，且比目标文件新，才会更新</span><br></pre></td></tr></tbody></table></figure>
 
 <p><strong>注：该命令可以把一个文件或多个文件一次移动一个文件夹中，但是最后一个目标文件一定要是“目录”。</strong></p>
 <p>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv file1 file2 file3 dir # 把文件file1、file2、file3移动到目录dir中mv file1 file2 # 把文件file1重命名为file2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv file1 file2 file3 dir # 把文件file1、file2、file3移动到目录dir中mv file1 file2 # 把文件file1重命名为file2</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="7、rm命令"><a href="#7、rm命令" class="headerlink" title="7、rm命令"></a>7、rm命令</h3><p>该命令用于删除文件或目录，remove之间，它的常用参数如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-f ：就是force的意思，忽略不存在的文件，不会出现警告消息-i ：互动模式，在删除前会询问用户是否操作-r ：递归删除，最常用于目录删除，它是一个非常危险的参数</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-f ：就是force的意思，忽略不存在的文件，不会出现警告消息-i ：互动模式，在删除前会询问用户是否操作-r ：递归删除，最常用于目录删除，它是一个非常危险的参数</span><br></pre></td></tr></tbody></table></figure>
 
 <p>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -i file # 删除文件file，在删除之前会询问是否进行该操作rm -fr dir # 强制删除目录dir中的所有文件</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -i file # 删除文件file，在删除之前会询问是否进行该操作rm -fr dir # 强制删除目录dir中的所有文件</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="8、ps命令"><a href="#8、ps命令" class="headerlink" title="8、ps命令"></a>8、ps命令</h3><p>该命令用于将某个时间点的进程运行情况选取下来并输出，process之意，它的常用参数如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-A ：所有的进程均显示出来-a ：不与terminal有关的所有进程-u ：有效用户的相关进程-x ：一般与a参数一起使用，可列出较完整的信息-l ：较长，较详细地将PID的信息列出</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-A ：所有的进程均显示出来-a ：不与terminal有关的所有进程-u ：有效用户的相关进程-x ：一般与a参数一起使用，可列出较完整的信息-l ：较长，较详细地将PID的信息列出</span><br></pre></td></tr></tbody></table></figure>
 
 <p>其实我们只要记住ps一般使用的命令参数搭配即可，它们并不多，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps aux # 查看系统所有的进程数据ps ax # 查看不与terminal有关的所有进程ps -lA # 查看系统所有的进程数据ps axjf # 查看连同一部分进程树状态</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps aux # 查看系统所有的进程数据ps ax # 查看不与terminal有关的所有进程ps -lA # 查看系统所有的进程数据ps axjf # 查看连同一部分进程树状态</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="9、kill命令"><a href="#9、kill命令" class="headerlink" title="9、kill命令"></a>9、kill命令</h3><p>该命令用于向某个工作（%jobnumber）或者是某个PID（数字）传送一个信号，它通常与ps和jobs命令一起使用，它的基本语法如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -signal PID</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -signal PID</span><br></pre></td></tr></tbody></table></figure>
 
 <p>signal的常用参数如下：</p>
 <p>注：最前面的数字为信号的代号，使用时可以用代号代替相应的信号。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1：SIGHUP，启动被终止的进程2：SIGINT，相当于输入ctrl+c，中断一个程序的进行9：SIGKILL，强制中断一个进程的进行15：SIGTERM，以正常的结束进程方式来终止进程17：SIGSTOP，相当于输入ctrl+z，暂停一个进程的进行</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1：SIGHUP，启动被终止的进程2：SIGINT，相当于输入ctrl+c，中断一个程序的进行9：SIGKILL，强制中断一个进程的进行15：SIGTERM，以正常的结束进程方式来终止进程17：SIGSTOP，相当于输入ctrl+z，暂停一个进程的进行</span><br></pre></td></tr></tbody></table></figure>
 
 <p>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># 以正常的结束进程方式来终于第一个后台工作，可用jobs命令查看后台中的第一个工作进程kill -SIGTERM %1 # 重新改动进程ID为PID的进程，PID可用ps命令通过管道命令加上grep命令进行筛选获得kill -SIGHUP PID</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># 以正常的结束进程方式来终于第一个后台工作，可用jobs命令查看后台中的第一个工作进程kill -SIGTERM %1 # 重新改动进程ID为PID的进程，PID可用ps命令通过管道命令加上grep命令进行筛选获得kill -SIGHUP PID</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="10、killall命令"><a href="#10、killall命令" class="headerlink" title="10、killall命令"></a>10、killall命令</h3><p>该命令用于向一个命令启动的进程发送一个信号，它的一般语法如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">killall [-iIe] [command name]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">killall [-iIe] [command name]</span><br></pre></td></tr></tbody></table></figure>
 
 <p>它的参数如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-i ：交互式的意思，若需要删除时，会询问用户-e ：表示后面接的command name要一致，但command name不能超过15个字符-I ：命令名称忽略大小写# 例如：killall -SIGHUP syslogd # 重新启动syslogd</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-i ：交互式的意思，若需要删除时，会询问用户-e ：表示后面接的command name要一致，但command name不能超过15个字符-I ：命令名称忽略大小写# 例如：killall -SIGHUP syslogd # 重新启动syslogd</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="11、file命令"><a href="#11、file命令" class="headerlink" title="11、file命令"></a>11、file命令</h3><p>该命令用于判断接在file命令后的文件的基本数据，因为在Linux下文件的类型并不是以后缀为分的，所以这个命令对我们来说就很有用了，它的用法非常简单，基本语法如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file filename#例如：file .&#x2F;test</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file filename#例如：file ./test</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="12、tar命令"><a href="#12、tar命令" class="headerlink" title="12、tar命令"></a>12、tar命令</h3><p>该命令用于对文件进行打包，默认情况并不会压缩，如果指定了相应的参数，它还会调用相应的压缩程序（如gzip和bzip等）进行压缩和解压。它的常用参数如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-c ：新建打包文件-t ：查看打包文件的内容含有哪些文件名-x ：解打包或解压缩的功能，可以搭配-C（大写）指定解压的目录，注意-c,-t,-x不能同时出现在同一条命令中-j ：通过bzip2的支持进行压缩&#x2F;解压缩-z ：通过gzip的支持进行压缩&#x2F;解压缩-v ：在压缩&#x2F;解压缩过程中，将正在处理的文件名显示出来-f filename ：filename为要处理的文件-C dir ：指定压缩&#x2F;解压缩的目录dir</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-c ：新建打包文件-t ：查看打包文件的内容含有哪些文件名-x ：解打包或解压缩的功能，可以搭配-C（大写）指定解压的目录，注意-c,-t,-x不能同时出现在同一条命令中-j ：通过bzip2的支持进行压缩/解压缩-z ：通过gzip的支持进行压缩/解压缩-v ：在压缩/解压缩过程中，将正在处理的文件名显示出来-f filename ：filename为要处理的文件-C dir ：指定压缩/解压缩的目录dir</span><br></pre></td></tr></tbody></table></figure>
 
 <p>上面的解说可以已经让你晕过去了，但是通常我们只需要记住下面三条命令即可：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">压缩：tar -jcv -f filename.tar.bz2 要被处理的文件或目录名称查询：tar -jtv -f filename.tar.bz2解压：tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">压缩：tar -jcv -f filename.tar.bz2 要被处理的文件或目录名称查询：tar -jtv -f filename.tar.bz2解压：tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录</span><br></pre></td></tr></tbody></table></figure>
 
 <p><strong>注：文件名并不定要以后缀tar.bz2结尾，这里主要是为了说明使用的压缩程序为bzip2</strong></p>
 <h3 id="13、cat命令"><a href="#13、cat命令" class="headerlink" title="13、cat命令"></a>13、cat命令</h3><p>该命令用于查看文本文件的内容，后接要查看的文件名，通常可用管道与more和less一起使用，从而可以一页页地查看数据。例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat text | less # 查看text文件中的内容# 注：这条命令也可以使用less text来代替</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat text | less # 查看text文件中的内容# 注：这条命令也可以使用less text来代替</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="14、chgrp命令"><a href="#14、chgrp命令" class="headerlink" title="14、chgrp命令"></a>14、chgrp命令</h3><p>该命令用于改变文件所属用户组，它的使用非常简单，它的基本用法如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chgrp [-R] dirname&#x2F;filename-R ：进行递归的持续对所有文件和子目录更改# 例如：chgrp users -R .&#x2F;dir # 递归地把dir目录下中的所有文件和子目录下所有文件的用户组修改为users</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chgrp [-R] dirname/filename-R ：进行递归的持续对所有文件和子目录更改# 例如：chgrp users -R ./dir # 递归地把dir目录下中的所有文件和子目录下所有文件的用户组修改为users</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="15、chown命令"><a href="#15、chown命令" class="headerlink" title="15、chown命令"></a>15、chown命令</h3><p>该命令用于改变文件的所有者，与chgrp命令的使用方法相同，只是修改的文件属性不同，不再详述。</p>
 <h3 id="16、chmod命令"><a href="#16、chmod命令" class="headerlink" title="16、chmod命令"></a>16、chmod命令</h3><p>该命令用于改变文件的权限，一般的用法如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod [-R] xyz 文件或目录-R：进行递归的持续更改，即连同子目录下的所有文件都会更改</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod [-R] xyz 文件或目录-R：进行递归的持续更改，即连同子目录下的所有文件都会更改</span><br></pre></td></tr></tbody></table></figure>
 
 <p>同时，chmod还可以使用u（user）、g（group）、o（other）、a（all）和+（加入）、-（删除）、=（设置）跟rwx搭配来对文件的权限进行更改。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># 例如：chmod 0755 file # 把file的文件权限改变为-rxwr-xr-xchmod g+w file # 向file的文件权限中加入用户组可写权限</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># 例如：chmod 0755 file # 把file的文件权限改变为-rxwr-xr-xchmod g+w file # 向file的文件权限中加入用户组可写权限</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="18、vim命令"><a href="#18、vim命令" class="headerlink" title="18、vim命令"></a>18、vim命令</h3><p>该命令主要用于文本编辑，它接一个或多个文件名作为参数，如果文件存在就打开，如果文件不存在就以该文件名创建一个文件。vim是一个非常好用的文本编辑器，它里面有很多非常好用的命令，在这里不再多说。可以参考这篇文章： <a target="_blank" rel="noopener" href="https://www.cnblogs.com/smartjourneys/articles/9151832.html">vim常用操作</a></p>
 <h3 id="19、gcc命令"><a href="#19、gcc命令" class="headerlink" title="19、gcc命令"></a>19、gcc命令</h3><p>对于一个用Linux开发C程序的人来说，这个命令就非常重要了，它用于把C语言的源程序文件，编译成可执行程序，由于g++的很多参数跟它非常相似，所以这里只介绍gcc的参数，它的常用参数如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-o ：output之意，用于指定生成一个可执行文件的文件名-c ：用于把源文件生成目标文件（.o)，并阻止编译器创建一个完整的程序-I ：增加编译时搜索头文件的路径-L ：增加编译时搜索静态连接库的路径-S ：把源文件生成汇编代码文件-lm：表示标准库的目录中名为libm.a的函数库-lpthread ：连接NPTL实现的线程库-std&#x3D; ：用于指定把使用的C语言的版本# 例如：# 把源文件test.c按照c99标准编译成可执行程序testgcc -o test test.c -lm -std&#x3D;c99#把源文件test.c转换为相应的汇编程序源文件test.sgcc -S test.c</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-o ：output之意，用于指定生成一个可执行文件的文件名-c ：用于把源文件生成目标文件（.o)，并阻止编译器创建一个完整的程序-I ：增加编译时搜索头文件的路径-L ：增加编译时搜索静态连接库的路径-S ：把源文件生成汇编代码文件-lm：表示标准库的目录中名为libm.a的函数库-lpthread ：连接NPTL实现的线程库-std= ：用于指定把使用的C语言的版本# 例如：# 把源文件test.c按照c99标准编译成可执行程序testgcc -o test test.c -lm -std=c99#把源文件test.c转换为相应的汇编程序源文件test.sgcc -S test.c</span><br></pre></td></tr></tbody></table></figure>
 
 
 
@@ -344,7 +340,7 @@
 <p>-lm：表示标准库的目录中名为libm.a的函数库 -lpthread ：连接NPTL实现的线程库 </p>
 <p>-std= ：用于指定把使用的C语言的版本  # 例如： # 把源文件test.c按照c99标准编译成可执行程序test gcc -o test test.c -lm -std=c99 #把源文件test.c转换为相应的汇编程序源文件test.s gcc -S test.c </p>
 <h3 id="20、time命令"><a href="#20、time命令" class="headerlink" title="20、time命令"></a>20、time命令</h3><p>该命令用于测算一个命令（即程序）的执行时间。它的使用非常简单，就像平时输入命令一样，不过在命令的前面加入一个time即可，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">time .&#x2F;processtime ps aux</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">time ./processtime ps aux</span><br></pre></td></tr></tbody></table></figure>
 
 <p>在程序或命令运行结束后，在最后输出了三个时间，它们分别是：</p>
 <ul>
@@ -375,7 +371,7 @@
       <div class="popular-posts-title"><a href="/vps/cac29224.html" rel="bookmark">2021年便宜VPS，最便宜的VPS排名</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/vps/8c69fb69.html" rel="bookmark">美国高防服务器,无视CC攻击,不限流量:raksmart</a></div>
+      <div class="popular-posts-title"><a href="/vps/62b7eed4.html" rel="bookmark">搬瓦工香港VPS：香港“1Gbps cn2 gia”带宽</a></div>
     </li>
   </ul>
 
@@ -460,7 +456,7 @@
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name"></p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -468,7 +464,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-count">53</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -479,7 +475,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-count">49</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -492,70 +488,70 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/cac29224.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;cac29224.html">最便宜VPS排行</a>
+          <a href="http://vps688.com/vps/cac29224.html" title="http://vps688.com/vps/cac29224.html">最便宜VPS排行</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/efbceaf8.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;efbceaf8.html">美国服务器</a>
+          <a href="http://vps688.com/vps/efbceaf8.html" title="http://vps688.com/vps/efbceaf8.html">美国服务器</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/28d4fdb0.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;28d4fdb0.html">香港服务器(CN)</a>
+          <a href="http://vps688.com/vps/28d4fdb0.html" title="http://vps688.com/vps/28d4fdb0.html">香港服务器(CN)</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/f70b6f7b.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;f70b6f7b.html">日本服务器</a>
+          <a href="http://vps688.com/vps/f70b6f7b.html" title="http://vps688.com/vps/f70b6f7b.html">日本服务器</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/9ca9268e.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;9ca9268e.html">韩国服务器</a>
+          <a href="http://vps688.com/vps/9ca9268e.html" title="http://vps688.com/vps/9ca9268e.html">韩国服务器</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/2231ba.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;2231ba.html">亚洲服务器</a>
+          <a href="http://vps688.com/vps/2231ba.html" title="http://vps688.com/vps/2231ba.html">亚洲服务器</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/4920f53.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;4920f53.html">站群服务器</a>
+          <a href="http://vps688.com/vps/4920f53.html" title="http://vps688.com/vps/4920f53.html">站群服务器</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/b94a88b6.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;b94a88b6.html">ddos高防服务器</a>
+          <a href="http://vps688.com/vps/b94a88b6.html" title="http://vps688.com/vps/b94a88b6.html">ddos高防服务器</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/4063b7dc.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;4063b7dc.html">不限流量服务器</a>
+          <a href="http://vps688.com/vps/4063b7dc.html" title="http://vps688.com/vps/4063b7dc.html">不限流量服务器</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/5790ebd9.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;5790ebd9.html">10Gbps带宽服务器</a>
+          <a href="http://vps688.com/vps/5790ebd9.html" title="http://vps688.com/vps/5790ebd9.html">10Gbps带宽服务器</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/7f1f5cd9.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;7f1f5cd9.html">外贸服务器怎么选</a>
+          <a href="http://vps688.com/vps/7f1f5cd9.html" title="http://vps688.com/vps/7f1f5cd9.html">外贸服务器怎么选</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/66c9235e.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;66c9235e.html">国外VPS-支付宝/微信付款</a>
+          <a href="http://vps688.com/vps/66c9235e.html" title="http://vps688.com/vps/66c9235e.html">国外VPS-支付宝/微信付款</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/a6b2648a.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;a6b2648a.html">美国cn2 gia VPS</a>
+          <a href="http://vps688.com/vps/a6b2648a.html" title="http://vps688.com/vps/a6b2648a.html">美国cn2 gia VPS</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/bf21e9eb.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;bf21e9eb.html">香港cn2 gia VPS</a>
+          <a href="http://vps688.com/vps/bf21e9eb.html" title="http://vps688.com/vps/bf21e9eb.html">香港cn2 gia VPS</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/56308b6a.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;56308b6a.html">日本cn2 gia VPS</a>
+          <a href="http://vps688.com/vps/56308b6a.html" title="http://vps688.com/vps/56308b6a.html">日本cn2 gia VPS</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/fc5c0cb2.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;fc5c0cb2.html">韩国cn2 gia VPS</a>
+          <a href="http://vps688.com/vps/fc5c0cb2.html" title="http://vps688.com/vps/fc5c0cb2.html">韩国cn2 gia VPS</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/ed34dd10.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;ed34dd10.html">欧洲cn2 gia VPS</a>
+          <a href="http://vps688.com/vps/ed34dd10.html" title="http://vps688.com/vps/ed34dd10.html">欧洲cn2 gia VPS</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/456513cd.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;456513cd.html">不限流量VPS</a>
+          <a href="http://vps688.com/vps/456513cd.html" title="http://vps688.com/vps/456513cd.html">不限流量VPS</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/92ba5497.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;92ba5497.html">windows VPS</a>
+          <a href="http://vps688.com/vps/92ba5497.html" title="http://vps688.com/vps/92ba5497.html">windows VPS</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/efe4bb05.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;efe4bb05.html">VPS云\云服务器</a>
+          <a href="http://vps688.com/vps/efe4bb05.html" title="http://vps688.com/vps/efe4bb05.html">VPS云\云服务器</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/ecf323b7.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;ecf323b7.html">大硬盘VPS</a>
+          <a href="http://vps688.com/vps/ecf323b7.html" title="http://vps688.com/vps/ecf323b7.html">大硬盘VPS</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://vps688.com/vps/ce03a6fb.html" title="http:&#x2F;&#x2F;vps688.com&#x2F;vps&#x2F;ce03a6fb.html">ddos高防VPS</a>
+          <a href="http://vps688.com/vps/ce03a6fb.html" title="http://vps688.com/vps/ce03a6fb.html">ddos高防VPS</a>
         </li>
     </ul>
   </div>
@@ -582,19 +578,19 @@
 
 <div class="copyright">
   
-  &copy; 2019 – 
+  © 2019 – 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder"></span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> &amp; <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
 
         
 <div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async="" src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
       <span class="post-meta-item-icon">
         <i class="fa fa-user"></i>
@@ -626,19 +622,15 @@
   </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+  
 
 
-<script src="/js/schemes/pisces.js"></script>
 
 
-<script src="/js/next-boot.js"></script>
+
+
+
+
 
 
 
@@ -649,7 +641,7 @@
 
 
   
-<script src="/js/local-search.js"></script>
+
 
 
 
@@ -667,5 +659,6 @@
 
   
 
-</body>
-</html>
+
+
+<script src="/bundle.js"></script></body></html>
